@@ -1,0 +1,233 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::542:x, comp editbutton:::p::p, space :::p, comp deletebutton:::p::p, space :::p, comp newbutton:::p::p, space :::p, comp forwardbutton:::p::p, space :::p, comp helplabel:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp backbutton::b:p::p, comp forwardbutton::b:p::p, comp newbutton::b:p::p, comp deletebutton::b:p::p, comp editbutton::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "helplabel"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "backbutton"
+					"text": "<<<<"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "forwardbutton"
+					"text": ">>>>"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "newbutton"
+					"text": "NEW"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deletebutton"
+					"text": "Delete"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "editbutton"
+					"text": "Edit"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp searchstring:::p:198:p, space :::p, comp firstnamesearchbutton:::p::p, space :::p, comp lastnamesearchbutton:::p::p, space :0:84:x}, comp scrollPane1::::493:x}, space s:::p, comp panel4:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, par t {comp panel4:::::x, seq {par b {comp searchstring::b:p::p, comp firstnamesearchbutton::b:p::p, comp lastnamesearchbutton::b:p::p}, space :::p, comp scrollPane1::::476:x}}, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "searchstring"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "firstnamesearchbutton"
+					"text": "First Name"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "lastnamesearchbutton"
+					"text": "Last Name"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "personsearchtable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+							add( new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							add( new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							add( new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						}, new java.util.Vector {
+							add( "Number" )
+							add( "Name" )
+							add( "Surname" )
+							add( "birthdate" )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp noteslabel:::p:166:p, space :0:0:x}, seq {par l {seq t {par t {comp med7toggle::::232:x, comp med5toggle::::232:x, comp med9toggle::::232:x}, space :p:12:p, par t {comp med8toggle::l::229:x, comp med6toggle::::229:x, comp med10toggle::::229:x}}, seq t {par t {comp med3toggle::l::232:x, comp med1toggle::::232:x}, space u:::p, par l:::p {comp med2toggle::::229:x, comp med4toggle::::229:x}}, seq {par l {par t:l::p {comp genderbox::::108:x, comp personnumberlabel::l::108:x, comp personnumberfield::l::108:x}, comp genderlabel::l:p:98:p}, space u:::p, par l {seq {par l {comp lastnamelabel:::p:100:p, comp lastnamefield:::p:169:p}, space :::p, par l {seq {comp firstnamelabel:::p:100:p, space :0:0:x}, comp firstnamefield:::::x}}, seq l {comp dateofbirthlabel:::p:100:p, space :p:75:p, comp lastappointmentlabel:::::x}, seq l {comp dateofbirthfield:::p:169:p, space :6:6:p, comp lastappointmentfield:::p:178:p, space :0:0:x}}}}, space :::p}}}, seq l {comp scrollPane2::::479:x, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par t {seq {comp firstnamelabel:::p::p, space :::p, comp firstnamefield:::p::p}, seq {par b {comp personnumberlabel::b:p::p, comp lastnamelabel::b:p::p}, space :::p, par b {comp personnumberfield::b:p::p, comp lastnamefield::b:p::p}}}, space u:::p, par t {seq {comp genderlabel:::p::p, space :::p, comp genderbox:::p::p}, seq {par l {comp dateofbirthlabel:::p::p, comp lastappointmentlabel:::p::p}, space :6:6:p, par l {comp dateofbirthfield:::p::p, comp lastappointmentfield:::p::p}}}, space s:::p, par b {comp med1toggle::b:p::p, comp med2toggle::b:p::p}, space :::p, par b {comp med3toggle::b:p::p, comp med4toggle::b:p::p}, space :::p, par b {comp med5toggle::b:p::p, comp med6toggle::b:p::p}, space :::p, par l {comp med7toggle:::p::p, comp med8toggle:::p::p}, space :::p, par b {comp med9toggle::b:p::p, comp med10toggle::b:p::p}, space u:::p, comp noteslabel:::p::p, space :::p, comp scrollPane2::::182:x, space :::p}}"
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "personnumberlabel"
+						"text": "Person Number"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "personnumberfield"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lastnamelabel"
+						"text": "Last Name"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastnamefield"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "firstnamelabel"
+						"text": "First Name"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "firstnamefield"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "genderlabel"
+						"text": "Gender"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "genderbox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Female"
+							addElement( "Female" )
+							addElement( "Male" )
+							addElement( "Diverse" )
+						}
+						"focusable": false
+						"editable": true
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "dateofbirthlabel"
+						"text": "Date of Birth"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "dateofbirthfield"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lastappointmentlabel"
+						"text": "last Appointment"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastappointmentfield"
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med1toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med2toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med3toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med4toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med5toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med6toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med7toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med8toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med9toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "med10toggle"
+						"text": "text"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "noteslabel"
+						"text": "Notes"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "notestextarea"
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}

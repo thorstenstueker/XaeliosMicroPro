@@ -1,0 +1,99 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp exit_button:::p::p, space :::p, comp connectbutton:::p::p, space ::552:x, comp comboBox1:::p:167:p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp exit_button::b:p::p, comp connectbutton::b:p::p, comp comboBox1::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "exit_button"
+					"text": "<<<<"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exit_", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "connectbutton"
+					"text": "Connect to Device"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox1"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:403:p, space ::295:x, comp panel4:::p::p, space :::p}, seq t {space ::829:x, comp label4:::p::p, space :p:119:p}}"
+				"$verticalGroup": "par l {seq l {space ::138:x, comp label4:::p:72:p, space :::p, par l {comp scrollPane1::t:p:100:p, comp panel4::t:p::p}, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp usernamefield::::286:x, seq {par l {comp usernamelabel:::p::p, comp passwordlabel::l:p::p}, space :0:224:x}, comp passwordfield::l::286:x, comp loginbutton::t::286:x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp usernamelabel:::p::p, space :::p, comp usernamefield:::p::p, space :::p, comp passwordlabel:::p::p, space :::p, comp passwordfield:::p::p, space s:::p, comp loginbutton:::p::p, space ::158:x}}"
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "usernamelabel"
+						"text": "Username"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "usernamefield"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "passwordlabel"
+						"text": "Password"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordfield"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "loginbutton"
+						"text": "Login"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login_pressed", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "login", true ) )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/bedienungsanllesen.png" )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "disclaimertext"
+						"text": "Read manual before use. This Device is not a medical device nor has for this device the conformity  as a medical device according to the regulatory rules  be declared by the manufacturer. Use this device only for the scope of use described in manual."
+						"lineWrap": true
+						"wrapStyleWord": true
+						"editable": false
+						"focusable": false
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}

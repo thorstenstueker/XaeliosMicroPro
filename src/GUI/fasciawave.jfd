@@ -1,0 +1,181 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button17:::p::p, space ::640:x, comp button16:::p::p, space :::p, comp button15:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button14::b:p::p, comp button15::b:p::p, comp button16::b:p::p, comp button17::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button14"
+					"text": "Start"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button15"
+					"text": "Pause"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button16"
+					"text": "Stop"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button17"
+					"text": "<<<<"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq l {space :p:985:p, comp label4:::p::p, space :0:11:x}, comp panel4:::::x, comp panel5::l:::x}, space :::p}}"
+				"$verticalGroup": "par l {seq {space :::p, comp panel5:::::x, space :p:12:p, comp label4:::p::p, space :::p, comp panel4:::p::p, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par t:::p {seq t {comp button1:::p::p, space u:::p, comp button10:::p::p, space :::x, comp button2:::p::p}, par l:t {comp label3::l:p::p, comp textField1::l:p:87:p}}, space :24:24:p, par l {comp label5:::p::p, comp textField2:::p:87:p, seq l {comp button3:::p::p, space :p:43:p, comp button4:::p::p}}, space s:::p, par l {comp label6:::p::p, comp textField3:::p:87:p, seq l {comp button5:::p::p, space :p:43:p, comp button6:::p::p}}, space s:::p, par l {comp label7:::p::p, seq {comp textField4:::p:87:p, space u:::p, comp toggleButton1:::p::p}, seq l {comp button7:::p::p, space u:::p, comp button13:::p::p, space :p:9:p, comp button8:::p::p}}, space s:::p, par l {comp label9:::p::p, seq {comp textField5:::p:87:p, space u:::p, comp toggleButton2:::p::p, space :::p, comp comboBox1:::p:244:p}, seq l {comp button18:::p::p, space :8:8:p, comp button19:::p::p, space :13:13:p, comp button20:::p::p}}, space ::28:x}}"
+					"$verticalGroup": "par l {seq {space :::p, par t {seq t {comp label7:::p::p, space :12:12:p, par b {comp textField4::b:p::p, comp toggleButton1::b:p::p}, space :6:6:p, par l {comp button7:::p::p, par b {comp button8::b:p::p, comp button13::b:p::p}}}, seq t {comp label3:::p::p, space u:::p, comp textField1:::p::p, space :::p, par b {comp button1::b:p::p, comp button2::b:p::p, comp button10::b:p::p}}, seq t {comp label5:::p::p, space :12:12:p, comp textField2:::p::p, space :6:6:p, par l {comp button3:::p::p, comp button4:::p::p}}, seq t {comp label6:::p::p, space :12:12:p, comp textField3:::p::p, space :6:6:p, par l {comp button5:::p::p, comp button6:::p::p}}, seq {comp label9:::p::p, space :9:9:p, par b {comp textField5::b:p::p, comp toggleButton2::b:p::p, comp comboBox1::b:p::p}, space :8:8:p, par l {comp button18:::p::p, comp button19:::p::p, comp button20:::p::p}}}, space ::23:x}}"
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Frequency"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "-"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button2"
+						"text": "+"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Intensity"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField2"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button3"
+						"text": "-"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button4"
+						"text": "+"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "Duration"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField3"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button5"
+						"text": "-"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button6"
+						"text": "+"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "pendlefreq. +"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField4"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button7"
+						"text": "-"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button8"
+						"text": "+"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "toggleButton1"
+						"text": "Pendlemode"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button10"
+						"text": "X"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button13"
+						"text": "X"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "pendletime s"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField5"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button18"
+						"text": "-"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button19"
+						"text": "X"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button20"
+						"text": "+"
+					} )
+					add( new FormComponent( "javax.swing.JToggleButton" ) {
+						name: "toggleButton2"
+						"text": "Sweep"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox1"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1::::984:x, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1::::371:x, space :::p}}"
+				} ) {
+					name: "panel5"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": "text"
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}

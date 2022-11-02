@@ -1,0 +1,175 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button10:::p::p, space ::665:x, comp toggleButton1:::p::p, space :::p, comp button11:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button10::b:p::p, comp button11::b:p::p, comp toggleButton1::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button10"
+					"text": "<<<<"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button11"
+					"text": ">>>>"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton1"
+					"text": "25 min +scan"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp panel4:::p::p, space :::p, comp panel6:::::x, space :::p, comp panel7:::::x, space :::p, comp panel8:::::x, space :::p, comp panel9:::::x, space :::p, comp panel10:::::x, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::p, par l {comp panel4:::::x, seq t {par t {comp panel10::l:::x, comp panel9::l:::x, comp panel6::l:::x, comp panel7::l:::x, comp panel8::l:::x}, space :::p}}}}"
+			} ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:0:x}"
+					"$verticalGroup": "par l {space :0:0:x}"
+				} ) {
+					name: "panel4"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane1::::187:x, seq {par l {comp label3::::181:x, seq l {comp button2:::p::p, space ::29:x, comp button3:::p::p}, seq l {comp button4:::p::p, space ::29:x, comp button5:::p::p}}, space :::p}}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label3:::p::p, space s:::p, comp scrollPane1::::398:x, space :::p, par b {comp button4::b:p::p, comp button5::b:p::p}, space :::p, par b {comp button2::b:p::p, comp button3::b:p::p}, space :::p}}"
+				} ) {
+					name: "panel6"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Selection List"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "list1"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button2"
+						"text": "C+"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button3"
+						"text": "D+"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button4"
+						"text": "A+"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button5"
+						"text": "B+"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane2::::187:x, seq {par l {comp button6::::181:x, seq {comp label4:::p::p, space :0:141:x}}, space :::p}}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label4:::p::p, space s:::p, comp scrollPane2::::430:x, space :::p, comp button6:::p::p, space :::p}}"
+				} ) {
+					name: "panel7"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "A"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "list2"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button6"
+						"text": "del selected"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane3::::187:x, seq {par l {comp button7::::181:x, seq {comp label5:::p::p, space :0:141:x}}, space :::p}}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label5:::p::p, space s:::p, comp scrollPane3::::430:x, space :::p, comp button7:::p::p, space :::p}}"
+				} ) {
+					name: "panel8"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "B"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane3"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "list3"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button7"
+						"text": "del selected"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane4::::187:x, seq {par l {comp button8::::181:x, seq {comp label6:::p::p, space :0:141:x}}, space :::p}}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label6:::p::p, space s:::p, comp scrollPane4::::430:x, space :::p, comp button8:::p::p, space :::p}}"
+				} ) {
+					name: "panel9"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "C"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane4"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "list4"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button8"
+						"text": "del selected"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane5::::187:x, seq {par l {comp button9::::181:x, seq {comp label7:::p::p, space :0:141:x}}, space :::p}}}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp label7:::p::p, space s:::p, comp scrollPane5::::430:x, space :::p, comp button9:::p::p, space :::p}}"
+				} ) {
+					name: "panel10"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "D"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane5"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "list5"
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button9"
+						"text": "del selected"
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}

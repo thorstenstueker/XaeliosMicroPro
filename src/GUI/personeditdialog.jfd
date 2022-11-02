@@ -1,0 +1,151 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button1:::p::p, space :::x, comp button2:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button1::b:p::p, comp button2::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "<<<<"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": ">>>>"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp personnumberlabel:::p:108:p, space :12:12:p, comp lastnamelabel:::p:100:p, space :75:75:p, comp firstnamelabel:::p:100:p}, seq {comp personnumberfield:::p:108:p, space :12:12:p, comp lastnamefield:::p:169:p, space :6:6:p, comp firstnamefield:::p:178:p}, seq {comp genderlabel:::p:98:p, space :22:22:p, comp dateofbirthlabel:::p:100:p, space :75:75:p, comp lastappointmentlabel:::p:178:p}, seq {comp genderbox:::p:108:p, space :12:12:p, comp dateofbirthfield:::p:169:p, space :6:6:p, comp lastappointmentfield:::p:178:p}, seq {comp med1toggle:::p:232:p, space :12:12:p, comp med2toggle:::p:229:p}, seq {comp med3toggle:::p:232:p, space :12:12:p, comp med4toggle:::p:229:p}, seq {comp med5toggle:::p:232:p, space :12:12:p, comp med6toggle:::p:229:p}, seq {comp med7toggle:::p:232:p, space :12:12:p, comp med8toggle:::p:229:p}, seq {comp med9toggle:::p:232:p, space :12:12:p, comp med10toggle:::p:229:p}, seq {space :3:3:p, comp noteslabel:::p:166:p}, comp notestextarea:::p:473:p}, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::p, par l {comp personnumberlabel:::p::p, comp lastnamelabel:::p::p, comp firstnamelabel:::p::p}, space :6:6:p, par l {comp personnumberfield:::p::p, comp lastnamefield:::p::p, comp firstnamefield:::p::p}, space :12:12:p, par l {comp genderlabel:::p::p, comp dateofbirthlabel:::p::p, comp lastappointmentlabel:::p::p}, space :6:6:p, par l {comp genderbox:::p::p, comp dateofbirthfield:::p::p, comp lastappointmentfield:::p::p}, space :18:18:p, par l {comp med1toggle:::p::p, comp med2toggle:::p::p}, space :6:6:p, par l {comp med3toggle:::p::p, comp med4toggle:::p::p}, space :6:6:p, par l {comp med5toggle:::p::p, comp med6toggle:::p::p}, space :6:6:p, par l {comp med7toggle:::p::p, comp med8toggle:::p::p}, space :6:6:p, par l {comp med9toggle:::p::p, comp med10toggle:::p::p}, space u:::p, comp noteslabel:::p::p, space :9:9:p, comp notestextarea:::p:176:p, space ::21:x}}"
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "personnumberlabel"
+					"text": "Person Number"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "personnumberfield"
+					"editable": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "genderlabel"
+					"text": "Gender"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "genderbox"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Female"
+						addElement( "Female" )
+						addElement( "Male" )
+						addElement( "Diverse" )
+					}
+					"focusable": false
+					"editable": true
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lastnamelabel"
+					"text": "Last Name"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "lastnamefield"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "dateofbirthlabel"
+					"text": "Date of Birth"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "dateofbirthfield"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "firstnamelabel"
+					"text": "First Name"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "firstnamefield"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lastappointmentlabel"
+					"text": "last Appointment"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "lastappointmentfield"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med1toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med2toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med3toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med4toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med5toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med6toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med7toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med8toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med9toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "med10toggle"
+					"text": "text"
+				} )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "notestextarea"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "noteslabel"
+					"text": "Notes"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 495, 760 )
+		} )
+	}
+}

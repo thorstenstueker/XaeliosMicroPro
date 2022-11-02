@@ -1,0 +1,86 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button5:::p::p, space ::870:x, comp helplabel:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp button5::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "helplabel"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "label2MousePressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button5"
+					"text": "<<<<"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button5", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp grossbildlabel::::804:x, space u:::p, comp panel4:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :p:176:p, comp panel4:::p::p, space ::97:x}, seq l {space :::p, comp grossbildlabel::::508:x, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp personsButton::::168:x, comp fsmButton::::168:x, comp fasciaWafesingleButton::l::168:x, comp settingsButton::l::168:x, comp usersButton::l::168:x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp personsButton:::p::p, space u:::p, comp fsmButton:::p::p, space u:::p, comp fasciaWafesingleButton:::p::p, space ::69:x, comp usersButton:::p::p, space u:::p, comp settingsButton:::p::p, space :::p}}"
+				} ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "personsButton"
+						"text": "Persons"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "persons", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "fsmButton"
+						"text": "FSM"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "fsm", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "fasciaWafesingleButton"
+						"text": "FasciaWave Single"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "fasciaWafesingle", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "settingsButton"
+						"text": "Settings"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "settings", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "usersButton"
+						"text": "Users"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "users", true ) )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "grossbildlabel"
+					"text": "text"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}

@@ -1,0 +1,140 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::75:x, comp deleteselectedentry:::p::p, space :::p, comp multiplicatorbutton:::p::p, space :::p, comp savenotebutton:::p::p, space :::p, comp newnotebutton:::p::p, space :::p, comp continueselected:::p::p, space :::p, comp newxaeliosone:::p::p, space :::p, comp newautomatik:::p::p, space :::p, comp helplabel:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp backbutton::b:p::p, comp newautomatik::b:p::p, comp newxaeliosone::b:p::p, comp continueselected::b:p::p, comp newnotebutton::b:p::p, comp savenotebutton::b:p::p, comp multiplicatorbutton::b:p::p, comp deleteselectedentry::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "helplabel"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "backbutton"
+					"text": "<<<<"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "newautomatik"
+					"text": "New Automatik"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "newxaeliosone"
+					"text": "New XaeliosONE"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "continueselected"
+					"text": "continue selected"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "newnotebutton"
+					"text": "new Note"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "savenotebutton"
+					"text": "save Note"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "multiplicatorbutton"
+					"text": "1X"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteselectedentry"
+					"text": "delete entry"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane1::l:p:497:p, comp labelfortable::l:p:177:p}, space s:::p, par l {seq {comp notelabel:::p::p, space :0:451:x}, comp noteheadline::::481:x, comp scrollPane2::::481:x}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, par b {comp labelfortable::b:p::p, comp notelabel::b:p::p}, space :::p, par l {comp scrollPane1::::486:x, seq {comp noteheadline:::p::p, space :::p, comp scrollPane2::::454:x}}, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelfortable"
+					"text": "Events in History"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "historytable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+							add( new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+							add( new java.util.Vector {
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+								add( null )
+							} )
+						}, new java.util.Vector {
+							add( "Number" )
+							add( "Type" )
+							add( "Reason" )
+							add( "Program" )
+							add( "Date" )
+						}, new java.util.Vector {
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						}, new java.util.Vector {
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "notearea"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "notelabel"
+					"text": "Note"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "noteheadline"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}
