@@ -2,6 +2,7 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,9 +10,15 @@ import java.awt.*;
  * @author unknown
  */
 public class therapyvote extends JPanel {
+    public static JFrame frame = new JFrame();
 
     public therapyvote() {
         initComponents();
+    }
+
+    public void back(ActionEvent e) {
+        Persons.main(null);
+        frame.dispose();
     }
 
     private void initComponents() {
@@ -67,6 +74,7 @@ public class therapyvote extends JPanel {
 
             //---- backbutton ----
             backbutton.setText("<<<<");
+            backbutton.addActionListener(e -> back(e));
 
             //---- forwardbutton ----
             forwardbutton.setText(">>>>");
@@ -78,7 +86,7 @@ public class therapyvote extends JPanel {
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backbutton)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 393, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 401, Short.MAX_VALUE)
                         .addComponent(forwardbutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
@@ -140,7 +148,7 @@ public class therapyvote extends JPanel {
                                 .addComponent(workmodecombobox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 309, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(25, Short.MAX_VALUE))
+                        .addContainerGap(29, Short.MAX_VALUE))
             );
         }
 
@@ -171,24 +179,28 @@ public class therapyvote extends JPanel {
     }
 
     public static void main(String[] args) {
-
+frame.add(new therapyvote());
+frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+frame.pack();
+frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+frame.setVisible(true);
 
 
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public static JPanel panel1;
-    public static JLabel label1;
-    public static JPanel panel2;
-    public static JLabel label2;
-    public static JButton backbutton;
-    public static JButton forwardbutton;
-    public static JPanel panel3;
-    public static JLabel workmodelabel;
-    public static JComboBox workmodecombobox;
-    public static JLabel kategorylabel;
-    public static JComboBox kategorycombobox;
-    public static JScrollPane scrollPane1;
-    public static JList programlist;
+    public JPanel panel1;
+    public JLabel label1;
+    public JPanel panel2;
+    public JLabel label2;
+    public JButton backbutton;
+    public JButton forwardbutton;
+    public JPanel panel3;
+    public JLabel workmodelabel;
+    public JComboBox workmodecombobox;
+    public JLabel kategorylabel;
+    public JComboBox kategorycombobox;
+    public JScrollPane scrollPane1;
+    public JList programlist;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

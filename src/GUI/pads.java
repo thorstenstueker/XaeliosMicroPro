@@ -21,6 +21,7 @@ public class pads extends JPanel {
         label3 = new JLabel();
         panel2 = new JPanel();
         label2 = new JLabel();
+        button1 = new JButton();
         panel3 = new JPanel();
 
         //======== this ========
@@ -67,17 +68,24 @@ public class pads extends JPanel {
             label2.setText("text");
             label2.setIcon(new ImageIcon(getClass().getResource("/pics/rect43.png")));
 
+            //---- button1 ----
+            button1.setText("<<<<");
+
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
             panel2Layout.setHorizontalGroup(
                 panel2Layout.createParallelGroup()
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
-                        .addGap(0, 952, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(button1)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 874, Short.MAX_VALUE)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
             );
             panel2Layout.setVerticalGroup(
                 panel2Layout.createParallelGroup()
-                    .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(button1))
             );
         }
 
@@ -123,11 +131,12 @@ public class pads extends JPanel {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public static JPanel panel1;
-    public static JLabel label1;
-    public static JLabel label3;
-    public static JPanel panel2;
-    public static JLabel label2;
-    public static JPanel panel3;
+    public JPanel panel1;
+    public JLabel label1;
+    public JLabel label3;
+    public JPanel panel2;
+    public JLabel label2;
+    public JButton button1;
+    public JPanel panel3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

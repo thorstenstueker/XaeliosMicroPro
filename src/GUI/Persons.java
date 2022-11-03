@@ -22,6 +22,11 @@ public class Persons extends JPanel {
         frame.dispose();
     }
 
+    public void forward(ActionEvent e) {
+        therapyvote.main(null);
+        frame.dispose();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
@@ -107,6 +112,7 @@ public class Persons extends JPanel {
 
             //---- forwardbutton ----
             forwardbutton.setText(">>>>");
+            forwardbutton.addActionListener(e -> forward(e));
 
             //---- newbutton ----
             newbutton.setText("NEW");

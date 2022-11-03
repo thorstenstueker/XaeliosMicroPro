@@ -38,6 +38,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "forwardbutton"
 					"text": ">>>>"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "forward", true ) )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "newbutton"
