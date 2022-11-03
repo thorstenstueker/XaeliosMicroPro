@@ -2,6 +2,8 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import microproware.MiCroProware;
+
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
@@ -17,13 +19,8 @@ public static JDialog personsdialog;
     }
 
     public static void persons(ActionEvent e) {
-       personsdialog = new JDialog();
-       personsdialog.add(new Persons());// TODO add your code here
-    personsdialog.setModal(true);
-  personsdialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-  personsdialog.pack();
-  personsdialog.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-  personsdialog.setVisible(true);
+        Persons.main(null);
+        frame.dispose();
     }
 
     public void fsm(ActionEvent e) {
@@ -47,6 +44,7 @@ public static JDialog personsdialog;
     }
 
     public void button5(ActionEvent e) {
+loginpanel.main(null);
 frame.dispose();
 
     }

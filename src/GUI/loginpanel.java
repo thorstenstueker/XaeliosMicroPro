@@ -25,6 +25,7 @@ public class loginpanel extends JPanel {
 
     public void login_pressed(ActionEvent e) {JFrame eframe = new JFrame();
 menu.main(null);
+frame.dispose();
 
     }
 

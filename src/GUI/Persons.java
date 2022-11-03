@@ -2,6 +2,7 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.table.*;
@@ -14,6 +15,11 @@ public class Persons extends JPanel {
     public static JFrame frame = new JFrame("Persons");
     public Persons() {
         initComponents();
+    }
+
+    public void back(ActionEvent e) {
+        menu.main(null);
+        frame.dispose();
     }
 
     private void initComponents() {
@@ -97,6 +103,7 @@ public class Persons extends JPanel {
 
             //---- backbutton ----
             backbutton.setText("<<<<");
+            backbutton.addActionListener(e -> back(e));
 
             //---- forwardbutton ----
             forwardbutton.setText(">>>>");
@@ -117,7 +124,7 @@ public class Persons extends JPanel {
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backbutton)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 542, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 562, Short.MAX_VALUE)
                         .addComponent(editbutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(deletebutton)
@@ -366,7 +373,7 @@ public class Persons extends JPanel {
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(noteslabel)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                            .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
                             .addContainerGap())
                 );
             }
@@ -384,7 +391,7 @@ public class Persons extends JPanel {
                                 .addComponent(firstnamesearchbutton)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lastnamesearchbutton)
-                                .addGap(0, 84, Short.MAX_VALUE))
+                                .addGap(0, 92, Short.MAX_VALUE))
                             .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(panel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -402,7 +409,7 @@ public class Persons extends JPanel {
                                     .addComponent(firstnamesearchbutton)
                                     .addComponent(lastnamesearchbutton))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)))
+                                .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)))
                         .addContainerGap())
             );
         }
@@ -438,6 +445,7 @@ public class Persons extends JPanel {
         frame.setSize(1024,768);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
     }
     public void fillform(){
@@ -452,46 +460,46 @@ public class Persons extends JPanel {
 
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public static JPanel panel1;
-    public static JLabel label1;
-    public static JPanel panel2;
-    public static JLabel helplabel;
-    public static JButton backbutton;
-    public static JButton forwardbutton;
-    public static JButton newbutton;
-    public static JButton deletebutton;
-    public static JButton editbutton;
-    public static JPanel panel3;
-    public static JTextField searchstring;
-    public static JButton firstnamesearchbutton;
-    public static JButton lastnamesearchbutton;
-    public static JScrollPane scrollPane1;
-    public static JTable personsearchtable;
-    public static JPanel panel4;
-    public static JLabel personnumberlabel;
-    public static JTextField personnumberfield;
-    public static JLabel lastnamelabel;
-    public static JTextField lastnamefield;
-    public static JLabel firstnamelabel;
-    public static JTextField firstnamefield;
-    public static JLabel genderlabel;
-    public static JComboBox<String> genderbox;
-    public static JLabel dateofbirthlabel;
-    public static JTextField dateofbirthfield;
-    public static JLabel lastappointmentlabel;
-    public static JTextField lastappointmentfield;
-    public static JToggleButton med1toggle;
-    public static JToggleButton med2toggle;
-    public static JToggleButton med3toggle;
-    public static JToggleButton med4toggle;
-    public static JToggleButton med5toggle;
-    public static JToggleButton med6toggle;
-    public static JToggleButton med7toggle;
-    public static JToggleButton med8toggle;
-    public static JToggleButton med9toggle;
-    public static JToggleButton med10toggle;
-    public static JLabel noteslabel;
-    public static JScrollPane scrollPane2;
-    public static JTextArea notestextarea;
+    public JPanel panel1;
+    public JLabel label1;
+    public JPanel panel2;
+    public JLabel helplabel;
+    public JButton backbutton;
+    public JButton forwardbutton;
+    public JButton newbutton;
+    public JButton deletebutton;
+    public JButton editbutton;
+    public JPanel panel3;
+    public JTextField searchstring;
+    public JButton firstnamesearchbutton;
+    public JButton lastnamesearchbutton;
+    public JScrollPane scrollPane1;
+    public JTable personsearchtable;
+    public JPanel panel4;
+    public JLabel personnumberlabel;
+    public JTextField personnumberfield;
+    public JLabel lastnamelabel;
+    public JTextField lastnamefield;
+    public JLabel firstnamelabel;
+    public JTextField firstnamefield;
+    public JLabel genderlabel;
+    public JComboBox<String> genderbox;
+    public JLabel dateofbirthlabel;
+    public JTextField dateofbirthfield;
+    public JLabel lastappointmentlabel;
+    public JTextField lastappointmentfield;
+    public JToggleButton med1toggle;
+    public JToggleButton med2toggle;
+    public JToggleButton med3toggle;
+    public JToggleButton med4toggle;
+    public JToggleButton med5toggle;
+    public JToggleButton med6toggle;
+    public JToggleButton med7toggle;
+    public JToggleButton med8toggle;
+    public JToggleButton med9toggle;
+    public JToggleButton med10toggle;
+    public JLabel noteslabel;
+    public JScrollPane scrollPane2;
+    public JTextArea notestextarea;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
