@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p::p, comp panel1:::::x, space :p::p, comp panel3:::::x, space :p::p, comp panel2:::p::p, space :p::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp label3:::p::p, space ::648:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, par l {seq {comp label3:::p::p, space :0:0:x}, comp label1:::::x}, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Standard"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :0:952:x, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {comp label2::l:::x}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:1008:x}"
+				"$verticalGroup": "par l {space :0:520:x}"
+			} ) {
+				name: "panel3"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+	}
+}
