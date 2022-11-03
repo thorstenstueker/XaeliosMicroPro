@@ -22,7 +22,7 @@ public static JDialog personsdialog;
     personsdialog.setModal(true);
   personsdialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
   personsdialog.pack();
-  personsdialog.setLocationRelativeTo(null);
+  personsdialog.setSize(Toolkit.getDefaultToolkit().getScreenSize());
   personsdialog.setVisible(true);
     }
 
@@ -56,7 +56,7 @@ frame.dispose();
         frame.setContentPane(new menu());
         frame.pack();
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        frame.setSize(1024,768);
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
 frame.setResizable(true);
 frame.setVisible(true);
     }

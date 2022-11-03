@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
+import javax.tools.Tool;
 
 /**
  * @author unknown
@@ -23,7 +24,8 @@ public class loginpanel extends JPanel {
     }
 
     public void login_pressed(ActionEvent e) {JFrame eframe = new JFrame();
-loginpanel.main(null);
+menu.main(null);
+
     }
 
     public static void main(String[] args) {
@@ -34,6 +36,7 @@ loginpanel.main(null);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setResizable(true);
         frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
 
     }
