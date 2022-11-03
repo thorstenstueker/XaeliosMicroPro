@@ -10,14 +10,20 @@ import java.awt.*;
  * @author unknown
  */
 public class menu extends JPanel {
-
+public static JDialog personsdialog;
     public static JFrame frame;
     public menu() {
         initComponents();
     }
 
-    public void persons(ActionEvent e) {
-        // TODO add your code here
+    public static void persons(ActionEvent e) {
+       personsdialog = new JDialog();
+       personsdialog.add(new Persons());// TODO add your code here
+    personsdialog.setModal(true);
+  personsdialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+  personsdialog.pack();
+  personsdialog.setLocationRelativeTo(null);
+  personsdialog.setVisible(true);
     }
 
     public void fsm(ActionEvent e) {
@@ -245,18 +251,18 @@ frame.setVisible(true);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public JPanel panel1;
-    public JLabel label1;
-    public JPanel panel2;
-    public JLabel helplabel;
-    public JButton button5;
-    public JPanel panel3;
-    public JPanel panel4;
-    public JButton personsButton;
-    public JButton fsmButton;
-    public JButton fasciaWafesingleButton;
-    public JButton settingsButton;
-    public JButton usersButton;
-    public JLabel grossbildlabel;
+    public static JPanel panel1;
+    public static JLabel label1;
+    public static JPanel panel2;
+    public static JLabel helplabel;
+    public static JButton button5;
+    public static JPanel panel3;
+    public static JPanel panel4;
+    public static JButton personsButton;
+    public static JButton fsmButton;
+    public static JButton fasciaWafesingleButton;
+    public static JButton settingsButton;
+    public static JButton usersButton;
+    public static JLabel grossbildlabel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

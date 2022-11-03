@@ -23,9 +23,7 @@ public class loginpanel extends JPanel {
     }
 
     public void login_pressed(ActionEvent e) {JFrame eframe = new JFrame();
-menu newmenu = new menu();
-frame.add(new menu()); //.setContentPane(new menu());
-frame.setVisible(true);
+loginpanel.main(null);
     }
 
     public static void main(String[] args) {
