@@ -10,7 +10,7 @@ new FormModel {
 			name: "this"
 			"background": new java.awt.Color( 0, 0, 51, 255 )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space ::315:x, comp label1:::p:292:p, space :::p}}"
+				"$horizontalGroup": "par l {seq t {space :::x, comp label1:::p:292:p, space :::p}}"
 				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
 			} ) {
 				name: "panel1"
@@ -21,7 +21,7 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::401:x, comp forwardbutton:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp forwardbutton:::p::p, space :::p, comp label2:::p:56:p}}"
 				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp forwardbutton::b:p::p}}"
 			} ) {
 				name: "panel2"
@@ -42,34 +42,115 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane1::::601:x, seq {par l:::p {comp workmodelabel::::168:x, comp workmodecombobox::::168:x}, space :::p, par l {comp kategorylabel:::p:168:p, comp kategorycombobox:::p:168:p}, space :0:0:x}}, space :::p}}"
-				"$verticalGroup": "par l {seq l {space :::p, par l {seq {comp kategorylabel:::p::p, space :6:6:p, comp kategorycombobox:::p::p}, seq {comp workmodelabel:::p::p, space :::p, comp workmodecombobox:::p::p}}, space u:::p, comp scrollPane1:::p:309:p, space ::29:x}}"
+				"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1::::0:x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1:::::x, space :::p}}"
 			} ) {
 				name: "panel3"
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "workmodelabel"
-					"text": "Workmode"
-				} )
-				add( new FormComponent( "javax.swing.JComboBox" ) {
-					name: "workmodecombobox"
-				} )
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "kategorylabel"
-					"text": "Kategory"
-				} )
-				add( new FormComponent( "javax.swing.JComboBox" ) {
-					name: "kategorycombobox"
-				} )
-				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-					name: "scrollPane1"
-					add( new FormComponent( "javax.swing.JList" ) {
-						name: "programlist"
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane1"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp workmodelabel:::p:168:p, space :6:6:p, comp kategorylabel:::p:168:p}, seq l {comp workmodecombobox:::p:168:p, space :6:6:p, comp kategorycombobox:::p:168:p}, comp programlist::l::758:x}, par l {par l {seq {space :p:18:p, par l:::p {comp comboBox1::::208:x, comp comboBox2::::208:x, comp comboBox3::::208:x}}, seq t {space :::p, par l {comp comboBox6:::p:208:p, comp comboBox5:::p:208:p, comp comboBox4:::p:208:p}}}, seq t {space :::p, par l:::p {comp comboBox7::::208:x, comp comboBox8::::208:x, comp label3::l:p::p, comp button1::l::208:x, comp textField1::::208:x, comp button2::::208:x}}}, space :::p}}"
+						"$verticalGroup": "par l {seq t {space :::p, par l {comp workmodelabel:::p::p, comp kategorylabel:::p::p}, space :6:6:p, par l {comp workmodecombobox:::p::p, par b {comp kategorycombobox::b:p::p, comp comboBox1::b:p::p}}, space u:::p, par l {seq {comp comboBox2:::p::p, space u:::p, comp comboBox3:::p::p, space u:::p, comp comboBox6:::p::p, space :12:12:p, comp comboBox5:::p::p, space :12:12:p, comp comboBox4:::p::p, space u:::p, comp comboBox7:::p::p, space :12:12:p, comp comboBox8:::p::p, space s:::p, comp label3:::p::p, space :::p, comp button1:::p::p, space u:::p, comp textField1:::p::p, space u:::p, comp button2:::p::p, space ::57:x}, comp programlist::::413:x}}}"
+					} ) {
+						name: "panel4"
+						add( new FormComponent( "javax.swing.JList" ) {
+							name: "programlist"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "workmodecombobox"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "kategorycombobox"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "kategorylabel"
+							"text": "Kategory"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "workmodelabel"
+							"text": "Workmode"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox1"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox2"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox3"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox4"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox5"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox6"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox7"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox8"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "Intensity"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"text": "+10"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1"
+							"text": "100"
+							"horizontalAlignment": 4
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2"
+							"text": "-10"
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Automatic"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:996:x}"
+						"$verticalGroup": "par l {space :0:475:x}"
+					} ) {
+						name: "panel5"
+					}, new FormLayoutConstraints( null ) {
+						"title": "TissueSelect"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:996:x}"
+						"$verticalGroup": "par l {space :0:475:x}"
+					} ) {
+						name: "panel6"
+					}, new FormLayoutConstraints( null ) {
+						"title": "FSM"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:996:x}"
+						"$verticalGroup": "par l {space :0:475:x}"
+					} ) {
+						name: "panel7"
+					}, new FormLayoutConstraints( null ) {
+						"title": "FasciaWave"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {space :0:996:x}"
+						"$verticalGroup": "par l {space :0:475:x}"
+					} ) {
+						name: "panel8"
+					}, new FormLayoutConstraints( null ) {
+						"title": "Fix"
 					} )
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 625, 640 )
+			"size": new java.awt.Dimension( 1020, 760 )
 		} )
 	}
 }

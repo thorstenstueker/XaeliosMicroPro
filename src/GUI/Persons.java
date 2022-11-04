@@ -18,10 +18,14 @@ public class Persons extends JPanel {
     }
 
     public static void back(ActionEvent e) {
+        menu.main(null);
+        frame.dispose();
         // TODO add your code here
     }
 
     public static void forward(ActionEvent e) {
+        therapyvote.main(null);
+        frame.dispose();
         // TODO add your code here
     }
 
@@ -446,9 +450,10 @@ public class Persons extends JPanel {
 
     public static void main(String[] args) {
         frame.setContentPane(new Persons());
-        frame.setSize(1024,768);
+
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
     }
     public void fillform(){
@@ -463,46 +468,46 @@ public class Persons extends JPanel {
 
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public static JPanel panel1;
-    public static JLabel label1;
-    public static JPanel panel2;
-    public static JLabel helplabel;
-    public static JButton backbutton;
-    public static JButton forwardbutton;
-    public static JButton newbutton;
-    public static JButton deletebutton;
-    public static JButton editbutton;
-    public static JPanel panel3;
-    public static JTextField searchstring;
-    public static JButton firstnamesearchbutton;
-    public static JButton lastnamesearchbutton;
-    public static JScrollPane scrollPane1;
-    public static JTable personsearchtable;
-    public static JPanel panel4;
-    public static JLabel personnumberlabel;
-    public static JTextField personnumberfield;
-    public static JLabel lastnamelabel;
-    public static JTextField lastnamefield;
-    public static JLabel firstnamelabel;
-    public static JTextField firstnamefield;
-    public static JLabel genderlabel;
-    public static JComboBox<String> genderbox;
-    public static JLabel dateofbirthlabel;
-    public static JTextField dateofbirthfield;
-    public static JLabel lastappointmentlabel;
-    public static JTextField lastappointmentfield;
-    public static JToggleButton med1toggle;
-    public static JToggleButton med2toggle;
-    public static JToggleButton med3toggle;
-    public static JToggleButton med4toggle;
-    public static JToggleButton med5toggle;
-    public static JToggleButton med6toggle;
-    public static JToggleButton med7toggle;
-    public static JToggleButton med8toggle;
-    public static JToggleButton med9toggle;
-    public static JToggleButton med10toggle;
-    public static JLabel noteslabel;
-    public static JScrollPane scrollPane2;
-    public static JTextArea notestextarea;
+    public JPanel panel1;
+    public JLabel label1;
+    public JPanel panel2;
+    public JLabel helplabel;
+    public JButton backbutton;
+    public JButton forwardbutton;
+    public JButton newbutton;
+    public JButton deletebutton;
+    public JButton editbutton;
+    public JPanel panel3;
+    public JTextField searchstring;
+    public JButton firstnamesearchbutton;
+    public JButton lastnamesearchbutton;
+    public JScrollPane scrollPane1;
+    public JTable personsearchtable;
+    public JPanel panel4;
+    public JLabel personnumberlabel;
+    public JTextField personnumberfield;
+    public JLabel lastnamelabel;
+    public JTextField lastnamefield;
+    public JLabel firstnamelabel;
+    public JTextField firstnamefield;
+    public JLabel genderlabel;
+    public JComboBox<String> genderbox;
+    public JLabel dateofbirthlabel;
+    public JTextField dateofbirthfield;
+    public JLabel lastappointmentlabel;
+    public JTextField lastappointmentfield;
+    public JToggleButton med1toggle;
+    public JToggleButton med2toggle;
+    public JToggleButton med3toggle;
+    public JToggleButton med4toggle;
+    public JToggleButton med5toggle;
+    public JToggleButton med6toggle;
+    public JToggleButton med7toggle;
+    public JToggleButton med8toggle;
+    public JToggleButton med9toggle;
+    public JToggleButton med10toggle;
+    public JLabel noteslabel;
+    public JScrollPane scrollPane2;
+    public JTextArea notestextarea;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

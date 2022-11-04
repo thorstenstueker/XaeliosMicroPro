@@ -20,7 +20,7 @@ public static JDialog personsdialog;
     }
 
     public static void persons(ActionEvent e) {
-        Persons.main(null);
+       Persons.main(null);
         frame.dispose();
     }
 
