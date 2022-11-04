@@ -2,6 +2,7 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,10 +10,30 @@ import java.awt.*;
  * @author unknown
  */
 public class application extends JPanel {
+    public static JFrame frame = new JFrame();
+
     public application() {
         initComponents();
     }
 
+
+    public static void main(String[] args) {
+        frame.add(new application());
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        frame.setVisible(true);
+    }
+
+    public void back(ActionEvent e) {
+        Persons.main(null);
+        frame.dispose();
+    }
+
+    public void pads(ActionEvent e) {
+        GUI.pads.main(null);
+
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
@@ -31,12 +52,12 @@ public class application extends JPanel {
         textField1 = new JTextField();
         panel2 = new JPanel();
         label2 = new JLabel();
-        button1 = new JButton();
+        back = new JButton();
         button2 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
         button5 = new JButton();
-        button6 = new JButton();
+        pads = new JButton();
         panel3 = new JPanel();
         panel4 = new JPanel();
         button7 = new JButton();
@@ -173,8 +194,9 @@ public class application extends JPanel {
             label2.setText("text");
             label2.setIcon(new ImageIcon(getClass().getResource("/pics/rect43.png")));
 
-            //---- button1 ----
-            button1.setText("<<<<");
+            //---- back ----
+            back.setText("<<<<");
+            back.addActionListener(e -> back(e));
 
             //---- button2 ----
             button2.setText(">>>>");
@@ -193,8 +215,9 @@ public class application extends JPanel {
             button5.setBackground(Color.red);
             button5.setForeground(Color.white);
 
-            //---- button6 ----
-            button6.setText("PADS");
+            //---- pads ----
+            pads.setText("PADS");
+            pads.addActionListener(e -> pads(e));
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
@@ -202,9 +225,9 @@ public class application extends JPanel {
                 panel2Layout.createParallelGroup()
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(button1)
+                        .addComponent(back)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 472, Short.MAX_VALUE)
-                        .addComponent(button6)
+                        .addComponent(pads)
                         .addGap(18, 18, 18)
                         .addComponent(button5)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -220,12 +243,12 @@ public class application extends JPanel {
                 panel2Layout.createParallelGroup()
                     .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button1)
+                        .addComponent(back)
                         .addComponent(button2)
                         .addComponent(button3)
                         .addComponent(button4)
                         .addComponent(button5)
-                        .addComponent(button6))
+                        .addComponent(pads))
             );
         }
 
@@ -395,12 +418,12 @@ public class application extends JPanel {
     public JTextField textField1;
     public JPanel panel2;
     public JLabel label2;
-    public JButton button1;
+    public JButton back;
     public JButton button2;
     public JButton button3;
     public JButton button4;
     public JButton button5;
-    public JButton button6;
+    public JButton pads;
     public JPanel panel3;
     public JPanel panel4;
     public JButton button7;

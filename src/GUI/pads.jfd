@@ -5,7 +5,7 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
-			"$verticalGroup": "par l {seq l {space :p::p, comp panel1:::::x, space :p::p, comp panel3:::::x, space :p::p, comp panel2:::p::p, space :p::p}}"
+			"$verticalGroup": "par l {seq l {space :p::p, comp panel1:::::p, space :p::p, comp panel3:::::x, space :p::p, comp panel2:::p::p, space :p::p}}"
 		} ) {
 			name: "this"
 			"background": new java.awt.Color( 0, 0, 51, 255 )
@@ -25,8 +25,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp button1:::p::p, space ::874:x, comp label2:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button1::b:p::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp back:::p::p, space ::874:x, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp back::b:p::p}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -35,15 +35,31 @@ new FormModel {
 					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button1"
+					name: "back"
 					"text": "<<<<"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "back", true ) )
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {space :0:1008:x}"
-				"$verticalGroup": "par l {space :0:520:x}"
+				"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1::::996:x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1::::508:x, space :::p}}"
 			} ) {
 				name: "panel3"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					"horizontalScrollBarPolicy": 32
+					"verticalScrollBarPolicy": 22
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "graphicslabel"
+						"text": "text"
+						"autoscrolls": true
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 9
+						}
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "graphicslabelMouseClicked", true ) )
+						addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentResized", "graphicslabelComponentResized", true ) )
+					} )
+				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

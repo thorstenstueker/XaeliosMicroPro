@@ -2,6 +2,7 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,9 +10,39 @@ import java.awt.*;
  * @author unknown
  */
 public class pads extends JPanel {
+    public static JDialog frame = new JDialog();
+    public static int  labelwidth,labellength=0;
     public pads() {
         initComponents();
 
+    }
+
+    public void back(ActionEvent e) {
+
+        frame.dispose();
+        // TODO add your code here
+    }
+
+    public static void main(String[] args) {
+        frame.add(new pads());
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setModal(true);
+
+        frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        frame.setVisible(true);
+        labelwidth=graphicslabel.getWidth();
+        labellength=graphicslabel.getHeight();
+    }
+
+    public void graphicslabelMouseClicked(MouseEvent e) {
+        System.out.println(graphicslabel.getMousePosition());
+    }
+
+    public void graphicslabelComponentResized(ComponentEvent e) {
+
+
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -21,8 +52,10 @@ public class pads extends JPanel {
         label3 = new JLabel();
         panel2 = new JPanel();
         label2 = new JLabel();
-        button1 = new JButton();
+        back = new JButton();
         panel3 = new JPanel();
+        scrollPane1 = new JScrollPane();
+        graphicslabel = new JLabel();
 
         //======== this ========
         setBackground(new Color(0x000033));
@@ -68,8 +101,9 @@ public class pads extends JPanel {
             label2.setText("text");
             label2.setIcon(new ImageIcon(getClass().getResource("/pics/rect43.png")));
 
-            //---- button1 ----
-            button1.setText("<<<<");
+            //---- back ----
+            back.setText("<<<<");
+            back.addActionListener(e -> back(e));
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
@@ -77,7 +111,7 @@ public class pads extends JPanel {
                 panel2Layout.createParallelGroup()
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(button1)
+                        .addComponent(back)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 874, Short.MAX_VALUE)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
             );
@@ -85,22 +119,51 @@ public class pads extends JPanel {
                 panel2Layout.createParallelGroup()
                     .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(button1))
+                        .addComponent(back))
             );
         }
 
         //======== panel3 ========
         {
 
+            //======== scrollPane1 ========
+            {
+                scrollPane1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+                scrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+                //---- graphicslabel ----
+                graphicslabel.setText("text");
+                graphicslabel.setAutoscrolls(true);
+                graphicslabel.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        graphicslabelMouseClicked(e);
+                    }
+                });
+                graphicslabel.addComponentListener(new ComponentAdapter() {
+                    @Override
+                    public void componentResized(ComponentEvent e) {
+                        graphicslabelComponentResized(e);
+                    }
+                });
+                scrollPane1.setViewportView(graphicslabel);
+            }
+
             GroupLayout panel3Layout = new GroupLayout(panel3);
             panel3.setLayout(panel3Layout);
             panel3Layout.setHorizontalGroup(
                 panel3Layout.createParallelGroup()
-                    .addGap(0, 1008, Short.MAX_VALUE)
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
+                        .addContainerGap())
             );
             panel3Layout.setVerticalGroup(
                 panel3Layout.createParallelGroup()
-                    .addGap(0, 520, Short.MAX_VALUE)
+                    .addGroup(panel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
+                        .addContainerGap())
             );
         }
 
@@ -120,7 +183,7 @@ public class pads extends JPanel {
             layout.createParallelGroup()
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(panel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -136,7 +199,9 @@ public class pads extends JPanel {
     public JLabel label3;
     public JPanel panel2;
     public JLabel label2;
-    public JButton button1;
+    public JButton back;
     public JPanel panel3;
+    public JScrollPane scrollPane1;
+    public static JLabel graphicslabel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

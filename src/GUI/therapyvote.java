@@ -21,6 +21,11 @@ public class therapyvote extends JPanel {
         frame.dispose();
     }
 
+    public void forward(ActionEvent e) {
+        application.main(null);
+        frame.dispose();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
@@ -78,6 +83,7 @@ public class therapyvote extends JPanel {
 
             //---- forwardbutton ----
             forwardbutton.setText(">>>>");
+            forwardbutton.addActionListener(e -> forward(e));
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
