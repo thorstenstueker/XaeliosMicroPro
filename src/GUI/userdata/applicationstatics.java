@@ -10,6 +10,7 @@ Positions of Data in String from cnls.set File loaded above and filles in String
 21-chip7,22-chip8,23-chip9,24-highlcdrive,25-lowlcdrive, 26-therapyduty, 27-lcfreqstandard;
 */
 public static String[] applicationssetting;
+//test
 }
 
 
