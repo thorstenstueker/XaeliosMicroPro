@@ -4,6 +4,8 @@
 
 package GUI;
 
+import GUI.userdata.applicationstatics;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,6 +16,8 @@ import javax.tools.Tool;
  * @author unknown
  */
 public class loginpanel extends JPanel {
+
+
     public static JFrame frame = new JFrame();
     public loginpanel() {
         initComponents();
@@ -39,6 +43,12 @@ frame.dispose();
         frame.pack();
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
+applicationstatics.userhome=System.getProperty("user.home");
+applicationstatics.applicationhome=applicationstatics.userhome+"/hdware/";
+applicationstatics.databasehome=applicationstatics.applicationhome+"hddata";
+applicationstatics.structurehome=applicationstatics.applicationhome+"Structure";
+applicationstatics.programhome=applicationstatics.applicationhome+"mcprograms";
+
 
     }
 
