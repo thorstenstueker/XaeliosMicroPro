@@ -10,20 +10,17 @@ import java.awt.*;
  * @author unknown
  */
 public class therapyvote extends JPanel {
-    public static JFrame frame = new JFrame();
 
     public therapyvote() {
         initComponents();
     }
 
-    public void back(ActionEvent e) {
-        Persons.main(null);
-        frame.dispose();
+    public static void back(ActionEvent e) {
+        // TODO add your code here
     }
 
-    public void forward(ActionEvent e) {
-        application.main(null);
-        frame.dispose();
+    public static void forward(ActionEvent e) {
+        // TODO add your code here
     }
 
     private void initComponents() {
@@ -185,28 +182,24 @@ public class therapyvote extends JPanel {
     }
 
     public static void main(String[] args) {
-frame.add(new therapyvote());
-frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-frame.pack();
-frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-frame.setVisible(true);
+
 
 
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public JPanel panel1;
-    public JLabel label1;
-    public JPanel panel2;
-    public JLabel label2;
-    public JButton backbutton;
-    public JButton forwardbutton;
-    public JPanel panel3;
-    public JLabel workmodelabel;
-    public JComboBox workmodecombobox;
-    public JLabel kategorylabel;
-    public JComboBox kategorycombobox;
-    public JScrollPane scrollPane1;
-    public JList programlist;
+    public static JPanel panel1;
+    public static JLabel label1;
+    public static JPanel panel2;
+    public static JLabel label2;
+    public static JButton backbutton;
+    public static JButton forwardbutton;
+    public static JPanel panel3;
+    public static JLabel workmodelabel;
+    public static JComboBox workmodecombobox;
+    public static JLabel kategorylabel;
+    public static JComboBox kategorycombobox;
+    public static JScrollPane scrollPane1;
+    public static JList programlist;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

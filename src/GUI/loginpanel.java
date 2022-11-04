@@ -8,6 +8,9 @@ import GUI.userdata.applicationstatics;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.tools.Tool;
@@ -33,24 +36,35 @@ frame.dispose();
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         frame.setContentPane(new loginpanel());
 
 
-        frame.setSize(1024,768);
+        frame.setSize(1024, 768);
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setResizable(true);
         frame.pack();
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
-applicationstatics.userhome=System.getProperty("user.home");
-applicationstatics.applicationhome=applicationstatics.userhome+"/hdware/";
-applicationstatics.databasehome=applicationstatics.applicationhome+"hddata";
-applicationstatics.structurehome=applicationstatics.applicationhome+"Structure";
-applicationstatics.programhome=applicationstatics.applicationhome+"mcprograms";
+        applicationstatics.userhome = System.getProperty("user.home");
+        applicationstatics.applicationhome = applicationstatics.userhome + "/hdware/";
+        applicationstatics.databasehome = applicationstatics.applicationhome + "hddata/";
+        applicationstatics.structurehome = applicationstatics.applicationhome + "Structure";
+        applicationstatics.programhome = applicationstatics.applicationhome + "mcprograms/";
+
+        String cnlsstring = Files.readString(Path.of(applicationstatics.databasehome + "/cnls.set"));
+        System.out.println(cnlsstring);
+        applicationstatics.applicationssetting = cnlsstring.split(",");
+for(int i=0;i<applicationstatics.applicationssetting.length;i++) {
+    System.out.println(applicationstatics.applicationssetting[i]);
+}
+
+
+
 
 
     }
+
 
     public void login(ActionEvent e) {
         // TODO add your code here

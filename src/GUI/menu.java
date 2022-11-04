@@ -7,6 +7,7 @@ import microproware.MiCroProware;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 /**
  * @author unknown
@@ -43,7 +44,7 @@ public static JDialog personsdialog;
         // TODO add your code here
     }
 
-    public void button5(ActionEvent e) {
+    public void button5(ActionEvent e) throws IOException {
 loginpanel.main(null);
 frame.dispose();
 
@@ -118,7 +119,13 @@ frame.setVisible(true);
 
             //---- button5 ----
             button5.setText("<<<<");
-            button5.addActionListener(e -> button5(e));
+            button5.addActionListener(e -> {
+                try {
+                    button5(e);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
