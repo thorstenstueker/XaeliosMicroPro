@@ -32,6 +32,9 @@ public static JFrame frame = new JFrame();
         panel2 = new JPanel();
         label2 = new JLabel();
         backbutton = new JButton();
+        spinner1 = new JSpinner();
+        button14 = new JButton();
+        label10 = new JLabel();
         panel3 = new JPanel();
         tabbedPane1 = new JTabbedPane();
         panel4 = new JPanel();
@@ -40,44 +43,52 @@ public static JFrame frame = new JFrame();
         kategorycombobox = new JComboBox();
         kategorylabel = new JLabel();
         workmodelabel = new JLabel();
-        comboBox1 = new JComboBox();
-        comboBox2 = new JComboBox();
-        comboBox3 = new JComboBox();
-        comboBox4 = new JComboBox();
-        comboBox5 = new JComboBox();
-        comboBox6 = new JComboBox();
-        comboBox7 = new JComboBox();
-        comboBox8 = new JComboBox();
-        label3 = new JLabel();
-        button1 = new JButton();
-        textField1 = new JTextField();
-        button2 = new JButton();
-        button13 = new JButton();
+        comboBox1 = new JComboBox<>();
+        comboBox2 = new JComboBox<>();
+        comboBox3 = new JComboBox<>();
+        comboBox4 = new JComboBox<>();
+        comboBox5 = new JComboBox<>();
+        comboBox6 = new JComboBox<>();
+        comboBox7 = new JComboBox<>();
+        comboBox8 = new JComboBox<>();
         panel5 = new JPanel();
-        label4 = new JLabel();
-        scrollPane1 = new JScrollPane();
-        list1 = new JList();
-        list2 = new JList();
-        list3 = new JList();
-        list4 = new JList();
-        list5 = new JList();
-        list6 = new JList();
-        label5 = new JLabel();
-        label6 = new JLabel();
-        label7 = new JLabel();
-        label8 = new JLabel();
-        label9 = new JLabel();
+        panel9 = new JPanel();
+        button7 = new JButton();
         button3 = new JButton();
         button4 = new JButton();
         button5 = new JButton();
         button6 = new JButton();
-        button7 = new JButton();
+        scrollPane1 = new JScrollPane();
+        list1 = new JList();
+        label4 = new JLabel();
+        panel10 = new JPanel();
+        list2 = new JList();
+        label5 = new JLabel();
         button8 = new JButton();
+        comboBox9 = new JComboBox<>();
+        comboBox13 = new JComboBox<>();
+        panel11 = new JPanel();
+        label6 = new JLabel();
+        list3 = new JList();
         button9 = new JButton();
+        comboBox10 = new JComboBox<>();
+        comboBox14 = new JComboBox<>();
+        panel12 = new JPanel();
+        comboBox15 = new JComboBox<>();
+        comboBox11 = new JComboBox<>();
         button10 = new JButton();
+        list4 = new JList();
+        label7 = new JLabel();
+        panel13 = new JPanel();
+        label8 = new JLabel();
+        list5 = new JList();
+        comboBox16 = new JComboBox<>();
+        comboBox12 = new JComboBox<>();
         button11 = new JButton();
+        panel14 = new JPanel();
+        label9 = new JLabel();
+        list6 = new JList();
         button12 = new JButton();
-        button14 = new JButton();
         panel6 = new JPanel();
         panel7 = new JPanel();
         panel8 = new JPanel();
@@ -121,6 +132,12 @@ public static JFrame frame = new JFrame();
             backbutton.setText("<<<<");
             backbutton.addActionListener(e -> back(e));
 
+            //---- button14 ----
+            button14.setText(">>>");
+
+            //---- label10 ----
+            label10.setText("INTENSITY");
+
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
             panel2Layout.setHorizontalGroup(
@@ -129,13 +146,25 @@ public static JFrame frame = new JFrame();
                         .addContainerGap()
                         .addComponent(backbutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(label10)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button14)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
             );
             panel2Layout.setVerticalGroup(
                 panel2Layout.createParallelGroup()
                     .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backbutton))
+                        .addComponent(backbutton)
+                        .addComponent(button14)
+                        .addComponent(spinner1, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(label10)
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
         }
 
@@ -154,21 +183,77 @@ public static JFrame frame = new JFrame();
                     //---- workmodelabel ----
                     workmodelabel.setText("Workmode");
 
-                    //---- label3 ----
-                    label3.setText("Intensity");
+                    //---- comboBox1 ----
+                    comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "A AUTO",
+                        "A +",
+                        "A -",
+                        "A +/-",
+                        "A OFF"
+                    }));
 
-                    //---- button1 ----
-                    button1.setText("+10");
+                    //---- comboBox2 ----
+                    comboBox2.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "B AUTO",
+                        "B +",
+                        "B -",
+                        "B +/-",
+                        "B OFF"
+                    }));
 
-                    //---- textField1 ----
-                    textField1.setText("100");
-                    textField1.setHorizontalAlignment(SwingConstants.RIGHT);
+                    //---- comboBox3 ----
+                    comboBox3.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "C AUTO",
+                        "C +",
+                        "C -",
+                        "C +/-",
+                        "C OFF"
+                    }));
 
-                    //---- button2 ----
-                    button2.setText("-10");
+                    //---- comboBox4 ----
+                    comboBox4.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "F AUTO",
+                        "F +",
+                        "F -",
+                        "F +/-",
+                        "F OFF"
+                    }));
 
-                    //---- button13 ----
-                    button13.setText("Start");
+                    //---- comboBox5 ----
+                    comboBox5.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "E AUTO",
+                        "E +",
+                        "E -",
+                        "E +/-",
+                        "E OFF"
+                    }));
+
+                    //---- comboBox6 ----
+                    comboBox6.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "D AUTO",
+                        "D +",
+                        "D -",
+                        "D +/-",
+                        "D OFF"
+                    }));
+
+                    //---- comboBox7 ----
+                    comboBox7.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "G AUTO",
+                        "G +",
+                        "G -",
+                        "G +/-",
+                        "G OFF"
+                    }));
+
+                    //---- comboBox8 ----
+                    comboBox8.setModel(new DefaultComboBoxModel<>(new String[] {
+                        "H AUTO",
+                        "H +",
+                        "H -",
+                        "H +/-",
+                        "H OFF"
+                    }));
 
                     GroupLayout panel4Layout = new GroupLayout(panel4);
                     panel4.setLayout(panel4Layout);
@@ -188,31 +273,23 @@ public static JFrame frame = new JFrame();
                                     .addComponent(programlist, GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE))
                                 .addGroup(panel4Layout.createParallelGroup()
                                     .addGroup(panel4Layout.createParallelGroup()
-                                        .addGroup(panel4Layout.createParallelGroup()
-                                            .addGroup(panel4Layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(comboBox1, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                    .addComponent(comboBox2, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                    .addComponent(comboBox3, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)))
-                                            .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(panel4Layout.createParallelGroup()
-                                                    .addComponent(comboBox6, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboBox5, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboBox4, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE))))
+                                        .addGroup(panel4Layout.createSequentialGroup()
+                                            .addGap(18, 18, 18)
+                                            .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(comboBox1, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                                                .addComponent(comboBox2, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                                                .addComponent(comboBox3, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)))
                                         .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
                                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(comboBox7, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                .addComponent(comboBox8, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                .addComponent(label3)
-                                                .addComponent(button1, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
-                                                .addComponent(button2, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))))
+                                            .addGroup(panel4Layout.createParallelGroup()
+                                                .addComponent(comboBox6, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(comboBox5, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(comboBox4, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
                                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button13)))
+                                        .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(comboBox7, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                                            .addComponent(comboBox8, GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))))
                                 .addContainerGap())
                     );
                     panel4Layout.setVerticalGroup(
@@ -244,16 +321,6 @@ public static JFrame frame = new JFrame();
                                         .addComponent(comboBox7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addGap(12, 12, 12)
                                         .addComponent(comboBox8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(label3)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(button1)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(button2)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                                        .addComponent(button13)
                                         .addContainerGap())
                                     .addComponent(programlist, GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)))
                     );
@@ -263,61 +330,354 @@ public static JFrame frame = new JFrame();
                 //======== panel5 ========
                 {
 
-                    //---- label4 ----
-                    label4.setText("Tissues");
-
-                    //======== scrollPane1 ========
+                    //======== panel9 ========
                     {
-                        scrollPane1.setViewportView(list1);
+
+                        //---- button7 ----
+                        button7.setText("E-H+");
+
+                        //---- button3 ----
+                        button3.setText("A+");
+
+                        //---- button4 ----
+                        button4.setText("B+");
+
+                        //---- button5 ----
+                        button5.setText("C+");
+
+                        //---- button6 ----
+                        button6.setText("D+");
+
+                        //======== scrollPane1 ========
+                        {
+                            scrollPane1.setViewportView(list1);
+                        }
+
+                        //---- label4 ----
+                        label4.setText("Tissues");
+
+                        GroupLayout panel9Layout = new GroupLayout(panel9);
+                        panel9.setLayout(panel9Layout);
+                        panel9Layout.setHorizontalGroup(
+                            panel9Layout.createParallelGroup()
+                                .addGroup(panel9Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(panel9Layout.createParallelGroup()
+                                        .addComponent(button7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panel9Layout.createSequentialGroup()
+                                            .addComponent(label4)
+                                            .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(scrollPane1, GroupLayout.Alignment.TRAILING)
+                                        .addGroup(panel9Layout.createSequentialGroup()
+                                            .addGroup(panel9Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                .addComponent(button3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(button5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(12, 12, 12)
+                                            .addGroup(panel9Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(button4, GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                                                .addComponent(button6, GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))))
+                                    .addContainerGap())
+                        );
+                        panel9Layout.setVerticalGroup(
+                            panel9Layout.createParallelGroup()
+                                .addGroup(GroupLayout.Alignment.TRAILING, panel9Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label4)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 345, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panel9Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(button4)
+                                        .addComponent(button3))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(panel9Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(button5)
+                                        .addComponent(button6))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button7)
+                                    .addContainerGap())
+                        );
                     }
 
-                    //---- label5 ----
-                    label5.setText("Channel A");
+                    //======== panel10 ========
+                    {
 
-                    //---- label6 ----
-                    label6.setText("Channel B");
+                        //---- label5 ----
+                        label5.setText("Channel A");
 
-                    //---- label7 ----
-                    label7.setText("Channel C");
+                        //---- button8 ----
+                        button8.setText("A-");
 
-                    //---- label8 ----
-                    label8.setText("Channel D");
+                        //---- comboBox9 ----
+                        comboBox9.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "A AUTO",
+                            "A +",
+                            "A -",
+                            "A +/-",
+                            "A OFF"
+                        }));
 
-                    //---- label9 ----
-                    label9.setText("E-H");
+                        //---- comboBox13 ----
+                        comboBox13.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "E AUTO",
+                            "E +",
+                            "E -",
+                            "E +/-",
+                            "E OFF"
+                        }));
 
-                    //---- button3 ----
-                    button3.setText("A+");
+                        GroupLayout panel10Layout = new GroupLayout(panel10);
+                        panel10.setLayout(panel10Layout);
+                        panel10Layout.setHorizontalGroup(
+                            panel10Layout.createParallelGroup()
+                                .addGroup(panel10Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(panel10Layout.createParallelGroup()
+                                        .addGroup(panel10Layout.createSequentialGroup()
+                                            .addComponent(label5)
+                                            .addGap(0, 80, Short.MAX_VALUE))
+                                        .addComponent(comboBox13, GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                        .addComponent(comboBox9, GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                        .addComponent(button8, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                        .addComponent(list2, GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                                    .addContainerGap())
+                        );
+                        panel10Layout.setVerticalGroup(
+                            panel10Layout.createParallelGroup()
+                                .addGroup(panel10Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label5)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(list2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button8)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox13, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addContainerGap())
+                        );
+                    }
 
-                    //---- button4 ----
-                    button4.setText("B+");
+                    //======== panel11 ========
+                    {
 
-                    //---- button5 ----
-                    button5.setText("C+");
+                        //---- label6 ----
+                        label6.setText("Channel B");
 
-                    //---- button6 ----
-                    button6.setText("D+");
+                        //---- button9 ----
+                        button9.setText("B-");
 
-                    //---- button7 ----
-                    button7.setText("E-H+");
+                        //---- comboBox10 ----
+                        comboBox10.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "B AUTO",
+                            "B +",
+                            "B -",
+                            "B +/-",
+                            "B OFF"
+                        }));
 
-                    //---- button8 ----
-                    button8.setText("A-");
+                        //---- comboBox14 ----
+                        comboBox14.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "F AUTO",
+                            "F +",
+                            "F A +/-",
+                            "F OFF"
+                        }));
 
-                    //---- button9 ----
-                    button9.setText("B-");
+                        GroupLayout panel11Layout = new GroupLayout(panel11);
+                        panel11.setLayout(panel11Layout);
+                        panel11Layout.setHorizontalGroup(
+                            panel11Layout.createParallelGroup()
+                                .addGroup(panel11Layout.createSequentialGroup()
+                                    .addGroup(panel11Layout.createParallelGroup()
+                                        .addGroup(panel11Layout.createSequentialGroup()
+                                            .addGap(6, 6, 6)
+                                            .addGroup(panel11Layout.createParallelGroup()
+                                                .addComponent(list3, GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                                .addGroup(panel11Layout.createSequentialGroup()
+                                                    .addComponent(label6)
+                                                    .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGroup(GroupLayout.Alignment.TRAILING, panel11Layout.createSequentialGroup()
+                                            .addContainerGap()
+                                            .addGroup(panel11Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                                .addComponent(comboBox14, GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                                .addComponent(comboBox10, GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                                .addComponent(button9, GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))))
+                                    .addContainerGap())
+                        );
+                        panel11Layout.setVerticalGroup(
+                            panel11Layout.createParallelGroup()
+                                .addGroup(panel11Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label6)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(list3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button9)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox10, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox14, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addContainerGap())
+                        );
+                    }
 
-                    //---- button10 ----
-                    button10.setText("C-");
+                    //======== panel12 ========
+                    {
 
-                    //---- button11 ----
-                    button11.setText("D-");
+                        //---- comboBox15 ----
+                        comboBox15.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "G AUTO",
+                            "G +",
+                            "G -",
+                            "G +/-",
+                            "G OFF"
+                        }));
 
-                    //---- button12 ----
-                    button12.setText("E-E -");
+                        //---- comboBox11 ----
+                        comboBox11.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "C AUTO",
+                            "C +",
+                            "C -",
+                            "C +/-",
+                            "C OFF"
+                        }));
 
-                    //---- button14 ----
-                    button14.setText("Start");
+                        //---- button10 ----
+                        button10.setText("C-");
+
+                        //---- label7 ----
+                        label7.setText("Channel C");
+
+                        GroupLayout panel12Layout = new GroupLayout(panel12);
+                        panel12.setLayout(panel12Layout);
+                        panel12Layout.setHorizontalGroup(
+                            panel12Layout.createParallelGroup()
+                                .addGroup(GroupLayout.Alignment.TRAILING, panel12Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(panel12Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addGroup(GroupLayout.Alignment.LEADING, panel12Layout.createSequentialGroup()
+                                            .addComponent(label7)
+                                            .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(list4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(button10, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                        .addComponent(comboBox11)
+                                        .addComponent(comboBox15, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                    .addGap(10, 10, 10))
+                        );
+                        panel12Layout.setVerticalGroup(
+                            panel12Layout.createParallelGroup()
+                                .addGroup(GroupLayout.Alignment.TRAILING, panel12Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label7)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(list4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button10)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox11, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox15, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addContainerGap())
+                        );
+                    }
+
+                    //======== panel13 ========
+                    {
+
+                        //---- label8 ----
+                        label8.setText("Channel D");
+
+                        //---- comboBox16 ----
+                        comboBox16.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "H AUTO",
+                            "H +",
+                            "H -",
+                            "H +/-",
+                            "H OFF"
+                        }));
+
+                        //---- comboBox12 ----
+                        comboBox12.setModel(new DefaultComboBoxModel<>(new String[] {
+                            "D AUTO",
+                            "D +",
+                            "D -",
+                            "D +/-",
+                            "D OFF"
+                        }));
+
+                        //---- button11 ----
+                        button11.setText("D-");
+
+                        GroupLayout panel13Layout = new GroupLayout(panel13);
+                        panel13.setLayout(panel13Layout);
+                        panel13Layout.setHorizontalGroup(
+                            panel13Layout.createParallelGroup()
+                                .addGroup(panel13Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(panel13Layout.createParallelGroup()
+                                        .addGroup(panel13Layout.createSequentialGroup()
+                                            .addComponent(label8)
+                                            .addGap(0, 100, Short.MAX_VALUE))
+                                        .addComponent(list5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(button11, GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                                        .addComponent(comboBox12, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                                        .addComponent(comboBox16, GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+                                    .addContainerGap())
+                        );
+                        panel13Layout.setVerticalGroup(
+                            panel13Layout.createParallelGroup()
+                                .addGroup(panel13Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label8)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(list5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button11)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox12, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(comboBox16, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addContainerGap())
+                        );
+                    }
+
+                    //======== panel14 ========
+                    {
+
+                        //---- label9 ----
+                        label9.setText("E-H");
+
+                        //---- button12 ----
+                        button12.setText("E-E -");
+
+                        GroupLayout panel14Layout = new GroupLayout(panel14);
+                        panel14.setLayout(panel14Layout);
+                        panel14Layout.setHorizontalGroup(
+                            panel14Layout.createParallelGroup()
+                                .addGroup(panel14Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addGroup(panel14Layout.createParallelGroup()
+                                        .addGroup(panel14Layout.createSequentialGroup()
+                                            .addComponent(label9)
+                                            .addGap(0, 99, Short.MAX_VALUE))
+                                        .addComponent(button12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(list6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addContainerGap())
+                        );
+                        panel14Layout.setVerticalGroup(
+                            panel14Layout.createParallelGroup()
+                                .addGroup(GroupLayout.Alignment.TRAILING, panel14Layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(label9)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(list6, GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(button12)
+                                    .addContainerGap())
+                        );
+                    }
 
                     GroupLayout panel5Layout = new GroupLayout(panel5);
                     panel5.setLayout(panel5Layout);
@@ -325,110 +685,31 @@ public static JFrame frame = new JFrame();
                         panel5Layout.createParallelGroup()
                             .addGroup(panel5Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(panel5Layout.createParallelGroup()
-                                    .addGroup(panel5Layout.createSequentialGroup()
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addComponent(label4)
-                                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
-                                        .addGap(7, 7, 7)
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(list2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(label5)
-                                                .addGap(105, 105, 105)))
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(list3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(label6)
-                                                .addGap(106, 106, 106)))
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(list4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(label7)
-                                                .addGap(105, 105, 105)))
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(list5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18))
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(label8)
-                                                .addGap(105, 105, 105)))
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(label9)
-                                                .addGap(0, 126, Short.MAX_VALUE))
-                                            .addComponent(list6, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                                    .addGroup(panel5Layout.createSequentialGroup()
-                                        .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(button3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(button4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(button5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(button6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addComponent(button7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(panel5Layout.createParallelGroup()
-                                            .addGroup(panel5Layout.createSequentialGroup()
-                                                .addComponent(button8, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(button9, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(button10, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(button11, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(button12, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                                            .addGroup(GroupLayout.Alignment.TRAILING, panel5Layout.createSequentialGroup()
-                                                .addGap(0, 750, Short.MAX_VALUE)
-                                                .addComponent(button14)))))
+                                .addComponent(panel9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel13, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panel14, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
                     );
                     panel5Layout.setVerticalGroup(
                         panel5Layout.createParallelGroup()
                             .addGroup(panel5Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(label4)
-                                    .addComponent(label5)
-                                    .addComponent(label6)
-                                    .addComponent(label7)
-                                    .addComponent(label8)
-                                    .addComponent(label9))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(list6, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                    .addComponent(list5, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                    .addComponent(list4, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                    .addComponent(list3, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                    .addComponent(list2, GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                                    .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button3)
-                                    .addComponent(button4)
-                                    .addComponent(button8)
-                                    .addComponent(button9)
-                                    .addComponent(button10)
-                                    .addComponent(button11)
-                                    .addComponent(button12))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button5)
-                                    .addComponent(button6))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panel5Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(button7)
-                                    .addComponent(button14))
-                                .addContainerGap(8, Short.MAX_VALUE))
+                                .addGroup(panel5Layout.createParallelGroup()
+                                    .addComponent(panel10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel13, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panel14, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())
                     );
                 }
                 tabbedPane1.addTab("TissueSelect", panel5);
@@ -495,7 +776,7 @@ public static JFrame frame = new JFrame();
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(tabbedPane1)
+                        .addComponent(tabbedPane1, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())
             );
         }
@@ -543,6 +824,9 @@ frame.setVisible(true);
     public JPanel panel2;
     public JLabel label2;
     public JButton backbutton;
+    public JSpinner spinner1;
+    public JButton button14;
+    public JLabel label10;
     public JPanel panel3;
     public JTabbedPane tabbedPane1;
     public JPanel panel4;
@@ -551,44 +835,52 @@ frame.setVisible(true);
     public JComboBox kategorycombobox;
     public JLabel kategorylabel;
     public JLabel workmodelabel;
-    public JComboBox comboBox1;
-    public JComboBox comboBox2;
-    public JComboBox comboBox3;
-    public JComboBox comboBox4;
-    public JComboBox comboBox5;
-    public JComboBox comboBox6;
-    public JComboBox comboBox7;
-    public JComboBox comboBox8;
-    public JLabel label3;
-    public JButton button1;
-    public JTextField textField1;
-    public JButton button2;
-    public JButton button13;
+    public JComboBox<String> comboBox1;
+    public JComboBox<String> comboBox2;
+    public JComboBox<String> comboBox3;
+    public JComboBox<String> comboBox4;
+    public JComboBox<String> comboBox5;
+    public JComboBox<String> comboBox6;
+    public JComboBox<String> comboBox7;
+    public JComboBox<String> comboBox8;
     public JPanel panel5;
-    public JLabel label4;
-    public JScrollPane scrollPane1;
-    public JList list1;
-    public JList list2;
-    public JList list3;
-    public JList list4;
-    public JList list5;
-    public JList list6;
-    public JLabel label5;
-    public JLabel label6;
-    public JLabel label7;
-    public JLabel label8;
-    public JLabel label9;
+    public JPanel panel9;
+    public JButton button7;
     public JButton button3;
     public JButton button4;
     public JButton button5;
     public JButton button6;
-    public JButton button7;
+    public JScrollPane scrollPane1;
+    public JList list1;
+    public JLabel label4;
+    public JPanel panel10;
+    public JList list2;
+    public JLabel label5;
     public JButton button8;
+    public JComboBox<String> comboBox9;
+    public JComboBox<String> comboBox13;
+    public JPanel panel11;
+    public JLabel label6;
+    public JList list3;
     public JButton button9;
+    public JComboBox<String> comboBox10;
+    public JComboBox<String> comboBox14;
+    public JPanel panel12;
+    public JComboBox<String> comboBox15;
+    public JComboBox<String> comboBox11;
     public JButton button10;
+    public JList list4;
+    public JLabel label7;
+    public JPanel panel13;
+    public JLabel label8;
+    public JList list5;
+    public JComboBox<String> comboBox16;
+    public JComboBox<String> comboBox12;
     public JButton button11;
+    public JPanel panel14;
+    public JLabel label9;
+    public JList list6;
     public JButton button12;
-    public JButton button14;
     public JPanel panel6;
     public JPanel panel7;
     public JPanel panel8;

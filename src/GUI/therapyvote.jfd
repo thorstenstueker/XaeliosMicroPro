@@ -21,8 +21,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp label2:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp label10:::p::p, space :::p, comp spinner1:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp button14::b:p::p, comp spinner1::b:p:49:p}, seq l {space :::p, comp label10:::p::p, space :::x}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -35,17 +35,28 @@ new FormModel {
 					"text": "<<<<"
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "back", true ) )
 				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinner1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button14"
+					"text": ">>>"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label10"
+					"text": "INTENSITY"
+				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1::::0:x, space :::p}}"
-				"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp tabbedPane1::::0:x, space :::p}}"
 			} ) {
 				name: "panel3"
 				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
 					name: "tabbedPane1"
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp workmodelabel:::p:168:p, space :6:6:p, comp kategorylabel:::p:168:p}, seq l {comp workmodecombobox:::p:168:p, space :6:6:p, comp kategorycombobox:::p:168:p}, comp programlist::l::758:x}, par l {par l {par l {seq {space :p:18:p, par l:::p {comp comboBox1::::208:x, comp comboBox2::::208:x, comp comboBox3::::208:x}}, seq t {space :::p, par l {comp comboBox6:::p:208:p, comp comboBox5:::p:208:p, comp comboBox4:::p:208:p}}}, seq t {space :::p, par l:::p {comp comboBox7::::208:x, comp comboBox8::::208:x, comp label3::l:p::p, comp button1::l::208:x, comp textField1::::208:x, comp button2::::208:x}}}, seq t {space :::p, comp button13:::p::p}}, space :::p}}"
-						"$verticalGroup": "par l {seq t {space :::p, par l {comp workmodelabel:::p::p, comp kategorylabel:::p::p}, space :6:6:p, par l {comp workmodecombobox:::p::p, par b {comp kategorycombobox::b:p::p, comp comboBox1::b:p::p}}, space u:::p, par l {seq {comp comboBox2:::p::p, space u:::p, comp comboBox3:::p::p, space u:::p, comp comboBox6:::p::p, space :12:12:p, comp comboBox5:::p::p, space :12:12:p, comp comboBox4:::p::p, space u:::p, comp comboBox7:::p::p, space :12:12:p, comp comboBox8:::p::p, space s:::p, comp label3:::p::p, space :::p, comp button1:::p::p, space u:::p, comp textField1:::p::p, space u:::p, comp button2:::p::p, space ::29:x, comp button13:::p::p, space :::p}, comp programlist::::413:x}}}"
+						"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp workmodelabel:::p:168:p, space :6:6:p, comp kategorylabel:::p:168:p}, seq l {comp workmodecombobox:::p:168:p, space :6:6:p, comp kategorycombobox:::p:168:p}, comp programlist::l::758:x}, par l {par l {seq {space :p:18:p, par l:::p {comp comboBox1::::208:x, comp comboBox2::::208:x, comp comboBox3::::208:x}}, seq t {space :::p, par l {comp comboBox6:::p:208:p, comp comboBox5:::p:208:p, comp comboBox4:::p:208:p}}}, seq t {space :::p, par l:::p {comp comboBox7::::208:x, comp comboBox8::::208:x}}}, space :::p}}"
+						"$verticalGroup": "par l {seq t {space :::p, par l {comp workmodelabel:::p::p, comp kategorylabel:::p::p}, space :6:6:p, par l {comp workmodecombobox:::p::p, par b {comp kategorycombobox::b:p::p, comp comboBox1::b:p::p}}, space u:::p, par l {seq {comp comboBox2:::p::p, space u:::p, comp comboBox3:::p::p, space u:::p, comp comboBox6:::p::p, space :12:12:p, comp comboBox5:::p::p, space :12:12:p, comp comboBox4:::p::p, space u:::p, comp comboBox7:::p::p, space :12:12:p, comp comboBox8:::p::p, space :::x}, comp programlist::::413:x}}}"
 					} ) {
 						name: "panel4"
 						add( new FormComponent( "javax.swing.JList" ) {
@@ -67,145 +78,307 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox1"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "A AUTO"
+								addElement( "A AUTO" )
+								addElement( "A +" )
+								addElement( "A -" )
+								addElement( "A +/-" )
+								addElement( "A OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox2"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "B AUTO"
+								addElement( "B AUTO" )
+								addElement( "B +" )
+								addElement( "B -" )
+								addElement( "B +/-" )
+								addElement( "B OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox3"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "C AUTO"
+								addElement( "C AUTO" )
+								addElement( "C +" )
+								addElement( "C -" )
+								addElement( "C +/-" )
+								addElement( "C OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox4"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "F AUTO"
+								addElement( "F AUTO" )
+								addElement( "F +" )
+								addElement( "F -" )
+								addElement( "F +/-" )
+								addElement( "F OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox5"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "E AUTO"
+								addElement( "E AUTO" )
+								addElement( "E +" )
+								addElement( "E -" )
+								addElement( "E +/-" )
+								addElement( "E OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox6"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "D AUTO"
+								addElement( "D AUTO" )
+								addElement( "D +" )
+								addElement( "D -" )
+								addElement( "D +/-" )
+								addElement( "D OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox7"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "G AUTO"
+								addElement( "G AUTO" )
+								addElement( "G +" )
+								addElement( "G -" )
+								addElement( "G +/-" )
+								addElement( "G OFF" )
+							}
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox8"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label3"
-							"text": "Intensity"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button1"
-							"text": "+10"
-						} )
-						add( new FormComponent( "javax.swing.JTextField" ) {
-							name: "textField1"
-							"text": "100"
-							"horizontalAlignment": 4
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button2"
-							"text": "-10"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button13"
-							"text": "Start"
+							"model": new javax.swing.DefaultComboBoxModel {
+								selectedItem: "H AUTO"
+								addElement( "H AUTO" )
+								addElement( "H +" )
+								addElement( "H -" )
+								addElement( "H +/-" )
+								addElement( "H OFF" )
+							}
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": "Automatic"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq {space :::p, par l {seq {par l {comp label4:::p::p, comp scrollPane1:::p:155:p}, space :p:7:p, par l {seq {comp list2:::::x, space s:::p}, seq l {comp label5:::p::p, space :p:105:p}}, par l {seq {comp list3:::::x, space s:::p}, seq l {comp label6:::p::p, space :p:106:p}}, par l {seq {comp list4:::::x, space s:::p}, seq l {comp label7:::p::p, space :p:105:p}}, par l {seq {comp list5:::::x, space s:::p}, seq l {comp label8:::p::p, space :p:105:p}}, par l {seq {comp label9:::p::p, space :0:126:x}, comp list6::::150:x}}, seq {par l:::p {seq {comp button3:::::x, space :::p, comp button4:::::x}, seq l {comp button5:::::x, space :::p, comp button6:::::x}, comp button7::l:::x}, space u:::p, par l {seq {comp button8::::150:x, space s:::p, comp button9::::150:x, space s:::p, comp button10::::150:x, space s:::p, comp button11::::150:x, space s:::p, comp button12::::150:x}, seq t {space :0:750:x, comp button14:::p::p}}}}, space :::p}}"
-						"$verticalGroup": "par l {seq l {space :::p, par b {comp label4::b:p::p, comp label5::b:p::p, comp label6::b:p::p, comp label7::b:p::p, comp label8::b:p::p, comp label9::b:p::p}, space :::p, par b {comp list6::b::354:x, comp list5::b::354:x, comp list4::b::354:x, comp list3::b::354:x, comp list2::b::354:x, comp scrollPane1::::355:x}, space :::p, par b {comp button3::b:p::p, comp button4::b:p::p, comp button8::b:::p, comp button9::b:p::p, comp button10::b:p::p, comp button11::b:p::p, comp button12::b:p::p}, space :::p, par b {comp button5::b:p::p, comp button6::b:p::p}, space :::p, par b {comp button7::b:p::p, comp button14::b:p::p}, space ::8:x}}"
+						"$horizontalGroup": "par l {seq {space :::p, comp panel9:::::x, space :::p, comp panel10:::::x, space :::p, comp panel11:::::x, space :::p, comp panel12:::::x, space :::p, comp panel13:::::x, space :::p, comp panel14:::::x, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, par l {comp panel10:::::x, comp panel9:::::x, comp panel11:::::x, comp panel12::l:::x, comp panel13:::::x, comp panel14::l:::x}, space :::p}}"
 					} ) {
 						name: "panel5"
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label4"
-							"text": "Tissues"
-						} )
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane1"
-							add( new FormComponent( "javax.swing.JList" ) {
-								name: "list1"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :::p, par l {comp button7::l:::x, seq l {comp label4:::p::p, space :0:0:x}, comp scrollPane1::t:::x, seq {par t {comp button3:::::x, comp button5:::::x}, space :p:12:p, par l:::p {comp button4::::66:x, comp button6::::0:x}}}, space :::p}}"
+							"$verticalGroup": "par l {seq t {space :::p, comp label4:::p::p, space :::p, comp scrollPane1::::345:x, space :::p, par b {comp button4::b:p::p, comp button3::b:p::p}, space :::p, par b {comp button5::b:p::p, comp button6::b:p::p}, space :::p, comp button7:::p::p, space :::p}}"
+						} ) {
+							name: "panel9"
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button7"
+								"text": "E-H+"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button3"
+								"text": "A+"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button4"
+								"text": "B+"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button5"
+								"text": "C+"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button6"
+								"text": "D+"
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane1"
+								add( new FormComponent( "javax.swing.JList" ) {
+									name: "list1"
+								} )
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label4"
+								"text": "Tissues"
 							} )
 						} )
-						add( new FormComponent( "javax.swing.JList" ) {
-							name: "list2"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp label5:::p::p, space :0:80:x}, comp comboBox13::::143:x, comp comboBox9::l::143:x, comp button8::t::143:x, comp list2::l::143:x}, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp label5:::p::p, space :::p, comp list2:::::x, space :::p, comp button8:::::p, space :::p, comp comboBox9:::p::p, space :::p, comp comboBox13:::p::p, space :::p}}"
+						} ) {
+							name: "panel10"
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "list2"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label5"
+								"text": "Channel A"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button8"
+								"text": "A-"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox9"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "A AUTO"
+									addElement( "A AUTO" )
+									addElement( "A +" )
+									addElement( "A -" )
+									addElement( "A +/-" )
+									addElement( "A OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox13"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "E AUTO"
+									addElement( "E AUTO" )
+									addElement( "E +" )
+									addElement( "E -" )
+									addElement( "E +/-" )
+									addElement( "E OFF" )
+								}
+							} )
 						} )
-						add( new FormComponent( "javax.swing.JList" ) {
-							name: "list3"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {par l {seq l {space :p:6:p, par l {comp list3::::149:x, seq {comp label6:::p::p, space :0:0:x}}}, seq t {space :::p, par t {comp comboBox14::::149:x, comp comboBox10::::149:x, comp button9::::149:x}}}, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp label6:::p::p, space :::p, comp list3:::::x, space :::p, comp button9:::p::p, space :::p, comp comboBox10:::p::p, space :::p, comp comboBox14:::p::p, space :::p}}"
+						} ) {
+							name: "panel11"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label6"
+								"text": "Channel B"
+							} )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "list3"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button9"
+								"text": "B-"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox10"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "B AUTO"
+									addElement( "B AUTO" )
+									addElement( "B +" )
+									addElement( "B -" )
+									addElement( "B +/-" )
+									addElement( "B OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox14"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "F AUTO"
+									addElement( "F AUTO" )
+									addElement( "F +" )
+									addElement( "F A +/-" )
+									addElement( "F OFF" )
+								}
+							} )
 						} )
-						add( new FormComponent( "javax.swing.JList" ) {
-							name: "list4"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq t {space :::p, par t {seq l {comp label7:::p::p, space :0:0:x}, comp list4::t:::x, comp button10::t::150:x, comp comboBox11:::::x, comp comboBox15::l::150:x}, space :p:10:p}}"
+							"$verticalGroup": "par l {seq t {space :::p, comp label7:::p::p, space :::p, comp list4:::::x, space :::p, comp button10:::p::p, space :::p, comp comboBox11:::p::p, space :::p, comp comboBox15:::p::p, space :::p}}"
+						} ) {
+							name: "panel12"
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox15"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "G AUTO"
+									addElement( "G AUTO" )
+									addElement( "G +" )
+									addElement( "G -" )
+									addElement( "G +/-" )
+									addElement( "G OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox11"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "C AUTO"
+									addElement( "C AUTO" )
+									addElement( "C +" )
+									addElement( "C -" )
+									addElement( "C +/-" )
+									addElement( "C OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button10"
+								"text": "C-"
+							} )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "list4"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label7"
+								"text": "Channel C"
+							} )
 						} )
-						add( new FormComponent( "javax.swing.JList" ) {
-							name: "list5"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label8:::p::p, space :0:100:x}, comp list5::l:::x, comp button11::l::163:x, comp comboBox12::t::163:x, comp comboBox16::l::163:x}, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp label8:::p::p, space :::p, comp list5:::::x, space :::p, comp button11:::p::p, space :::p, comp comboBox12:::p::p, space :::p, comp comboBox16:::p::p, space :::p}}"
+						} ) {
+							name: "panel13"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label8"
+								"text": "Channel D"
+							} )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "list5"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox16"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "H AUTO"
+									addElement( "H AUTO" )
+									addElement( "H +" )
+									addElement( "H -" )
+									addElement( "H +/-" )
+									addElement( "H OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox12"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "D AUTO"
+									addElement( "D AUTO" )
+									addElement( "D +" )
+									addElement( "D -" )
+									addElement( "D +/-" )
+									addElement( "D OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button11"
+								"text": "D-"
+							} )
 						} )
-						add( new FormComponent( "javax.swing.JList" ) {
-							name: "list6"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label5"
-							"text": "Channel A"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label6"
-							"text": "Channel B"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label7"
-							"text": "Channel C"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label8"
-							"text": "Channel D"
-						} )
-						add( new FormComponent( "javax.swing.JLabel" ) {
-							name: "label9"
-							"text": "E-H"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button3"
-							"text": "A+"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button4"
-							"text": "B+"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button5"
-							"text": "C+"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button6"
-							"text": "D+"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button7"
-							"text": "E-H+"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button8"
-							"text": "A-"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button9"
-							"text": "B-"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button10"
-							"text": "C-"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button11"
-							"text": "D-"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button12"
-							"text": "E-E -"
-						} )
-						add( new FormComponent( "javax.swing.JButton" ) {
-							name: "button14"
-							"text": "Start"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp label9:::p::p, space :0:99:x}, comp button12::l:::x, comp list6::l:::x}, space :::p}}"
+							"$verticalGroup": "par l {seq t {space :::p, comp label9:::p::p, space :::p, comp list6::::401:x, space :::p, comp button12:::p::p, space :::p}}"
+						} ) {
+							name: "panel14"
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "label9"
+								"text": "E-H"
+							} )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "list6"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button12"
+								"text": "E-E -"
+							} )
 						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": "TissueSelect"
