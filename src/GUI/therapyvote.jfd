@@ -23,8 +23,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp label10:::p::p, space :::p, comp spinner1:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp button14::b:p::p, comp spinner1::b:p:49:p}, seq l {space :::p, comp label10:::p::p, space :::x}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp label12:::p::p, space :::p, comp spinner4:::p::p, space :::p, comp label11:::p::p, space :::p, comp spinner3:::p::p, space :::p, comp toggleButton4:::p::p, space :::p, comp toggleButton3:::p::p, space :::p, comp label10:::p::p, space :::p, comp spinner1:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp button14::b:p::p, comp spinner1::b:p:49:p, comp toggleButton3::b:p::p, comp toggleButton4::b:p::p}, seq l {space :::p, par l {comp spinner3:::::x, comp spinner4::t:::x, seq {par l {comp label12:::p::p, comp label11:::p::p, comp label10:::p::p}, space :0:0:x}}, space :::p}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -47,6 +47,28 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label10"
 					"text": "INTENSITY"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton3"
+					"text": "1 X"
+				} )
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton4"
+					"text": "MultiStaging"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinner3"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label11"
+					"text": "Staging intensity"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinner4"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label12"
+					"text": "Staging width"
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
@@ -80,7 +102,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox1"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel0 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "A AUTO"
 								addElement( "A AUTO" )
 								addElement( "A +" )
@@ -91,7 +113,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox2"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel1 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "B AUTO"
 								addElement( "B AUTO" )
 								addElement( "B +" )
@@ -102,7 +124,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox3"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel2 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "C AUTO"
 								addElement( "C AUTO" )
 								addElement( "C +" )
@@ -113,7 +135,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox4"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel3 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "F AUTO"
 								addElement( "F AUTO" )
 								addElement( "F +" )
@@ -124,7 +146,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox5"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel4 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "E AUTO"
 								addElement( "E AUTO" )
 								addElement( "E +" )
@@ -135,7 +157,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox6"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel5 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "D AUTO"
 								addElement( "D AUTO" )
 								addElement( "D +" )
@@ -146,7 +168,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox7"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel6 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "G AUTO"
 								addElement( "G AUTO" )
 								addElement( "G +" )
@@ -157,7 +179,7 @@ new FormModel {
 						} )
 						add( new FormComponent( "javax.swing.JComboBox" ) {
 							name: "comboBox8"
-							"model": new javax.swing.DefaultComboBoxModel {
+							"model": &DefaultComboBoxModel7 new javax.swing.DefaultComboBoxModel {
 								selectedItem: "H AUTO"
 								addElement( "H AUTO" )
 								addElement( "H +" )
@@ -228,7 +250,7 @@ new FormModel {
 							} )
 							add( new FormComponent( "javax.swing.JComboBox" ) {
 								name: "comboBox9"
-								"model": new javax.swing.DefaultComboBoxModel {
+								"model": &DefaultComboBoxModel8 new javax.swing.DefaultComboBoxModel {
 									selectedItem: "A AUTO"
 									addElement( "A AUTO" )
 									addElement( "A +" )
@@ -386,28 +408,363 @@ new FormModel {
 						"title": "TissueSelect"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {space :0:996:x}"
-						"$verticalGroup": "par l {space :0:475:x}"
+						"$horizontalGroup": "par l {seq l {space :::p, comp panel16:::::x, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp panel16:::::x, space :::p}}"
 					} ) {
 						name: "panel6"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp workmodelabel2:::p:168:p, space :6:6:p, comp kategorylabel2:::p:168:p}, seq l {comp workmodecombobox2:::p:168:p, space :6:6:p, comp kategorycombobox2:::p:168:p}, comp programlist2::l:::x}, par l {par l {seq {space :p:18:p, par l:::p {comp comboBox25::::208:x, comp comboBox26:::::x, comp comboBox27:::::x}}, seq t {space :::p, par l {comp comboBox30:::p:208:p, comp comboBox29:::p:208:p, comp comboBox28:::p:208:p}}}, seq t {space :::p, par l:::p {comp comboBox31::::208:x, comp comboBox32:::::x}}}, space :::p}}"
+							"$verticalGroup": "par l {seq t {space :::p, par l {comp workmodelabel2:::p::p, comp kategorylabel2:::p::p}, space :6:6:p, par l {comp workmodecombobox2:::p::p, par b {comp kategorycombobox2::b:p::p, comp comboBox25::b:p::p}}, space u:::p, par l {seq {comp comboBox26:::p::p, space u:::p, comp comboBox27:::p::p, space u:::p, comp comboBox30:::p::p, space :12:12:p, comp comboBox29:::p::p, space :12:12:p, comp comboBox28:::p::p, space u:::p, comp comboBox31:::p::p, space :12:12:p, comp comboBox32:::p::p, space ::175:x}, comp programlist2:::::x}}}"
+						} ) {
+							name: "panel16"
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "programlist2"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "workmodecombobox2"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "kategorycombobox2"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "kategorylabel2"
+								"text": "Kategory"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "workmodelabel2"
+								"text": "Workmode"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox25"
+								"model": #DefaultComboBoxModel0
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox26"
+								"model": #DefaultComboBoxModel1
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox27"
+								"model": #DefaultComboBoxModel2
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox28"
+								"model": #DefaultComboBoxModel3
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox29"
+								"model": #DefaultComboBoxModel4
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox30"
+								"model": #DefaultComboBoxModel5
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox31"
+								"model": #DefaultComboBoxModel6
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox32"
+								"model": #DefaultComboBoxModel7
+							} )
+						} )
 					}, new FormLayoutConstraints( null ) {
-						"title": "FSM"
+						"title": "FIXApplication"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {space :0:996:x}"
-						"$verticalGroup": "par l {space :0:475:x}"
+						"$horizontalGroup": "par l {seq l {space :::p, comp panel17:::::x, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp panel17:::::x, space :::p}}"
 					} ) {
 						name: "panel7"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp workmodelabel3:::p:168:p, space :6:6:p, comp kategorylabel3:::p:168:p}, seq l {comp workmodecombobox3:::p:168:p, space :6:6:p, comp kategorycombobox3:::p:168:p}, comp programlist3::l::386:x}, space :p:18:p, par l:::p {seq l {par l {seq l {comp workmodelabel4:::p:168:p, space :6:6:p, comp kategorylabel4:::p:168:p}, seq l {comp workmodecombobox4:::p:168:p, space :6:6:p, comp kategorycombobox4:::p:168:p}}, space :p:232:p}, seq l {comp programlist4:::p:342:p, space :::x, par l:::p {comp comboBox35::::220:x, comp comboBox36::l::220:x, comp comboBox34::l::220:x, comp comboBox33::l::220:x, comp comboBox37::l::220:x, comp comboBox38::l::220:x, comp comboBox39::l::220:x, comp comboBox40::l::220:x, comp comboBox41::l::220:x}, space :::p}}}}"
+							"$verticalGroup": "par l {seq {space :::p, par l {seq t {par l {comp workmodelabel3:::p::p, comp kategorylabel3:::p::p}, space :6:6:p, par l {comp workmodecombobox3:::p::p, comp kategorycombobox3:::p::p}, space u:::p, comp programlist3:::::x}, seq l {par l {comp workmodelabel4:::p::p, comp kategorylabel4:::p::p}, space :6:6:p, par l {comp workmodecombobox4:::p::p, comp kategorycombobox4:::p::p}, space :12:12:p, par l {seq {comp comboBox33:::p::p, space :::p, comp comboBox34:::p::p, space :::p, comp comboBox36:::p::p, space :::p, comp comboBox37:::p::p, space :::p, comp comboBox38:::p::p, space :::p, comp comboBox39:::p::p, space :::p, comp comboBox40:::p::p, space :::p, comp comboBox41:::p::p, space ::161:x, comp comboBox35:::p::p}, comp programlist4::::401:x}}}}}"
+						} ) {
+							name: "panel17"
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "programlist3"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "workmodecombobox3"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "kategorycombobox3"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "kategorylabel3"
+								"text": "Kategory"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "workmodelabel3"
+								"text": "Microcurrent-Mode"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox35"
+								"model": new javax.swing.DefaultComboBoxModel {
+									selectedItem: "N AUTO"
+									addElement( "N AUTO" )
+									addElement( "N +" )
+									addElement( "N -" )
+									addElement( "N +/-" )
+									addElement( "N OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "workmodelabel4"
+								"text": "Fasciawave-Mode"
+							} )
+							add( new FormComponent( "javax.swing.JLabel" ) {
+								name: "kategorylabel4"
+								"text": "Kategory"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "workmodecombobox4"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "kategorycombobox4"
+							} )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "programlist4"
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox33"
+								"model": #DefaultComboBoxModel8
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox34"
+								"model": &DefaultComboBoxModel9 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "B AUTO"
+									addElement( "B AUTO" )
+									addElement( "B +" )
+									addElement( "B -" )
+									addElement( "B +/-" )
+									addElement( "B OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox36"
+								"model": &DefaultComboBoxModel10 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "C AUTO"
+									addElement( "C AUTO" )
+									addElement( "C +" )
+									addElement( "C -" )
+									addElement( "C +/-" )
+									addElement( "C OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox37"
+								"model": &DefaultComboBoxModel11 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "D AUTO"
+									addElement( "D AUTO" )
+									addElement( "D +" )
+									addElement( "D -" )
+									addElement( "D +/-" )
+									addElement( "D OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox38"
+								"model": &DefaultComboBoxModel12 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "E AUTO"
+									addElement( "E AUTO" )
+									addElement( "E +" )
+									addElement( "E -" )
+									addElement( "E +/-" )
+									addElement( "E OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox39"
+								"model": &DefaultComboBoxModel13 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "F AUTO"
+									addElement( "F AUTO" )
+									addElement( "F +" )
+									addElement( "F -" )
+									addElement( "F +/-" )
+									addElement( "F OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox40"
+								"model": &DefaultComboBoxModel14 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "G AUTO"
+									addElement( "G AUTO" )
+									addElement( "G +" )
+									addElement( "G -" )
+									addElement( "G +/-" )
+									addElement( "G OFF" )
+								}
+							} )
+							add( new FormComponent( "javax.swing.JComboBox" ) {
+								name: "comboBox41"
+								"model": &DefaultComboBoxModel15 new javax.swing.DefaultComboBoxModel {
+									selectedItem: "H AUTO"
+									addElement( "H AUTO" )
+									addElement( "H +" )
+									addElement( "H -" )
+									addElement( "H +/-" )
+									addElement( "H OFF" )
+								}
+							} )
+						} )
 					}, new FormLayoutConstraints( null ) {
 						"title": "FasciaWave"
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {space :0:996:x}"
-						"$verticalGroup": "par l {space :0:475:x}"
+						"$horizontalGroup": "par l {seq l {space :::p, comp panel15:::::x, space :::p, par l {comp comboBox18:::::x, comp comboBox17:::::x, comp comboBox19:::::x, comp comboBox20:::::x, comp comboBox24:::::x, comp comboBox23:::::x, comp comboBox21:::::x, comp comboBox22:::::x, comp toggleButton1::l:::x, seq {comp label3:::p::p, space :::x, comp spinner2:::p::p}, comp toggleButton2:::::x, seq l {comp panel18:::p:173:p, space :0:0:x}}, space :p:12:p}}"
+						"$verticalGroup": "par l {seq l {space :::p, par l {comp panel15:::::x, seq {comp comboBox17:::p::p, space :::p, comp comboBox18:::p::p, space :::p, comp comboBox19:::p::p, space :6:6:p, comp comboBox20:::p::p, space :::p, comp comboBox24:::p::p, space :6:6:p, comp comboBox23:::p::p, space :6:6:p, comp comboBox21:::p::p, space :6:6:p, comp comboBox22:::p::p, space u:::p, comp toggleButton1:::p::p, space u:::p, par l {comp label3:::p::p, comp spinner2:::p:52:p}, space u:::p, comp toggleButton2:::p::p, space :::p, comp panel18:::p::p, space :0:7:x}}, space :::p}}"
 					} ) {
 						name: "panel8"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane2::::787:x, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, comp scrollPane2::::451:x, space :::p}}"
+						} ) {
+							name: "panel15"
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane2"
+								add( new FormComponent( "javax.swing.JTable" ) {
+									name: "table1"
+									"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+										add( new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										} )
+										add( new java.util.Vector {
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+											add( null )
+										} )
+									}, new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									}, new java.util.Vector {
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+										add( class java.lang.String )
+									}, new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									}, new java.util.Vector {
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+										add( null )
+									} )
+									"border": new javax.swing.border.EtchedBorder( 1, null, null )
+									"cellSelectionEnabled": true
+									"selectionMode": 0
+									"showHorizontalLines": true
+									"showVerticalLines": true
+								} )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox17"
+							"model": #DefaultComboBoxModel8
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox18"
+							"model": #DefaultComboBoxModel9
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox19"
+							"model": #DefaultComboBoxModel10
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox20"
+							"model": #DefaultComboBoxModel11
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox21"
+							"model": #DefaultComboBoxModel14
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox22"
+							"model": #DefaultComboBoxModel15
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox23"
+							"model": #DefaultComboBoxModel13
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox24"
+							"model": #DefaultComboBoxModel12
+						} )
+						add( new FormComponent( "javax.swing.JToggleButton" ) {
+							name: "toggleButton1"
+							"text": "AUTOSCAN"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "Linetime"
+						} )
+						add( new FormComponent( "javax.swing.JSpinner" ) {
+							name: "spinner2"
+						} )
+						add( new FormComponent( "javax.swing.JToggleButton" ) {
+							name: "toggleButton2"
+							"text": "Singleline"
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp button1:::p::p, space :::x, comp button2:::p::p}, seq {par l {seq l {comp button13:::p::p, space s:::p, comp button15:::p::p}, comp button16::l:p::p}, space :0:0:x}}, space :::p}}"
+							"$verticalGroup": "par l {seq l {space :::p, par b {comp button1::b:p::p, comp button2::b:p::p}, space :::p, par b {comp button13::b:p::p, comp button15::b:p::p}, space :::p, comp button16:::p::p, space ::16:x}}"
+						} ) {
+							name: "panel18"
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button1"
+								"text": "+ Line"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button2"
+								"text": "- Line"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button13"
+								"text": "Load"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button15"
+								"text": "save"
+							} )
+							add( new FormComponent( "javax.swing.JButton" ) {
+								name: "button16"
+								"text": "delete"
+							} )
+						} )
 					}, new FormLayoutConstraints( null ) {
-						"title": "Fix"
+						"title": "IndividualFrequenceApplication"
 					} )
 				} )
 			} )
