@@ -2,6 +2,7 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.table.*;
@@ -10,8 +11,19 @@ import javax.swing.table.*;
  * @author unknown
  */
 public class personhistory extends JPanel {
+    public static JFrame frame = new JFrame();
     public personhistory() {
         initComponents();
+    }
+
+    public static void back(ActionEvent e) {
+        Persons.main(null);
+        frame.dispose();
+    }
+
+    public static void newautomatik(ActionEvent e) {
+        therapyvote.main(null);
+        frame.dispose();
     }
 
     private void initComponents() {
@@ -22,12 +34,11 @@ public class personhistory extends JPanel {
         helplabel = new JLabel();
         backbutton = new JButton();
         newautomatik = new JButton();
-        newxaeliosone = new JButton();
         continueselected = new JButton();
         newnotebutton = new JButton();
         savenotebutton = new JButton();
-        multiplicatorbutton = new JToggleButton();
         deleteselectedentry = new JButton();
+        button1 = new JButton();
         panel3 = new JPanel();
         labelfortable = new JLabel();
         scrollPane1 = new JScrollPane();
@@ -74,12 +85,11 @@ public class personhistory extends JPanel {
 
             //---- backbutton ----
             backbutton.setText("<<<<");
+            backbutton.addActionListener(e -> back(e));
 
             //---- newautomatik ----
-            newautomatik.setText("New Automatik");
-
-            //---- newxaeliosone ----
-            newxaeliosone.setText("New XaeliosONE");
+            newautomatik.setText("New Application");
+            newautomatik.addActionListener(e -> newautomatik(e));
 
             //---- continueselected ----
             continueselected.setText("continue selected");
@@ -90,11 +100,11 @@ public class personhistory extends JPanel {
             //---- savenotebutton ----
             savenotebutton.setText("save Note");
 
-            //---- multiplicatorbutton ----
-            multiplicatorbutton.setText("1X");
-
             //---- deleteselectedentry ----
             deleteselectedentry.setText("delete entry");
+
+            //---- button1 ----
+            button1.setText("View selected");
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
@@ -103,18 +113,16 @@ public class personhistory extends JPanel {
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backbutton)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                         .addComponent(deleteselectedentry)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(multiplicatorbutton)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(57, 57, 57)
                         .addComponent(savenotebutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(newnotebutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(continueselected)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(newxaeliosone)
+                        .addGap(99, 99, 99)
+                        .addComponent(button1)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(newautomatik)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -126,12 +134,11 @@ public class personhistory extends JPanel {
                         .addComponent(helplabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(backbutton)
                         .addComponent(newautomatik)
-                        .addComponent(newxaeliosone)
                         .addComponent(continueselected)
                         .addComponent(newnotebutton)
                         .addComponent(savenotebutton)
-                        .addComponent(multiplicatorbutton)
-                        .addComponent(deleteselectedentry))
+                        .addComponent(deleteselectedentry)
+                        .addComponent(button1))
             );
         }
 
@@ -204,7 +211,7 @@ public class personhistory extends JPanel {
                             .addGroup(panel3Layout.createSequentialGroup()
                                 .addComponent(noteheadline, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE)))
+                                .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)))
                         .addContainerGap())
             );
         }
@@ -235,26 +242,33 @@ public class personhistory extends JPanel {
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
+    public static void main(String[] args) {
+        frame.add(new personhistory());
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        frame.setVisible(true);
+    }
+
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public JPanel panel1;
-    public JLabel label1;
-    public JPanel panel2;
-    public JLabel helplabel;
-    public JButton backbutton;
-    public JButton newautomatik;
-    public JButton newxaeliosone;
-    public JButton continueselected;
-    public JButton newnotebutton;
-    public JButton savenotebutton;
-    public JToggleButton multiplicatorbutton;
-    public JButton deleteselectedentry;
-    public JPanel panel3;
-    public JLabel labelfortable;
-    public JScrollPane scrollPane1;
-    public JTable historytable;
-    public JScrollPane scrollPane2;
-    public JTextArea notearea;
-    public JLabel notelabel;
-    public JTextField noteheadline;
+    public static JPanel panel1;
+    public static JLabel label1;
+    public static JPanel panel2;
+    public static JLabel helplabel;
+    public static JButton backbutton;
+    public static JButton newautomatik;
+    public static JButton continueselected;
+    public static JButton newnotebutton;
+    public static JButton savenotebutton;
+    public static JButton deleteselectedentry;
+    public static JButton button1;
+    public static JPanel panel3;
+    public static JLabel labelfortable;
+    public static JScrollPane scrollPane1;
+    public static JTable historytable;
+    public static JScrollPane scrollPane2;
+    public static JTextArea notearea;
+    public static JLabel notelabel;
+    public static JTextField noteheadline;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

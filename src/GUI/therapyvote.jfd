@@ -23,8 +23,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, comp label12:::p::p, space :::p, comp spinner4:::p::p, space :::p, comp label11:::p::p, space :::p, comp spinner3:::p::p, space :::p, comp toggleButton4:::p::p, space :::p, comp toggleButton3:::p::p, space :::p, comp label10:::p::p, space :::p, comp spinner1:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp button14::b:p::p, comp spinner1::b:p:49:p, comp toggleButton3::b:p::p, comp toggleButton4::b:p::p}, seq l {space :::p, par l {comp spinner3:::::x, comp spinner4::t:::x, seq {par l {comp label12:::p::p, comp label11:::p::p, comp label10:::p::p}, space :0:0:x}}, space :::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space :::x, par l {comp label13::t:p::p, comp label14::t:p::p}, space :::p, comp spinner5:::p::p, space :::p, comp label12:::p::p, space :::p, comp spinner4:::p::p, space :::p, comp label11:::p::p, space :::p, comp spinner3:::p::p, space :::p, comp toggleButton4:::p::p, space :::p, comp toggleButton3:::p::p, space :::p, comp label10:::p::p, space :::p, comp spinner1:::p::p, space :::p, comp button14:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp backbutton::b:p::p, comp button14::b:p::p, comp spinner1::b:p:49:p, comp toggleButton3::b:p::p, comp toggleButton4::b:p::p}, seq l {space :::p, par l {comp spinner3:::::x, comp spinner4::t:::x, comp spinner5::t:::x, seq {par l {comp label13:::p::p, comp label12:::p::p, comp label11:::p::p, comp label10:::p::p}, space :::x, comp label14:::p::p}}, space :::p}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -70,6 +70,17 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label12"
 					"text": "Staging width"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spinner5"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label13"
+					"text": "Fascia"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label14"
+					"text": "int."
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {

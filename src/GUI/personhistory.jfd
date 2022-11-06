@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -21,8 +21,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::75:x, comp deleteselectedentry:::p::p, space :::p, comp multiplicatorbutton:::p::p, space :::p, comp savenotebutton:::p::p, space :::p, comp newnotebutton:::p::p, space :::p, comp continueselected:::p::p, space :::p, comp newxaeliosone:::p::p, space :::p, comp newautomatik:::p::p, space :::p, comp helplabel:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp backbutton::b:p::p, comp newautomatik::b:p::p, comp newxaeliosone::b:p::p, comp continueselected::b:p::p, comp newnotebutton::b:p::p, comp savenotebutton::b:p::p, comp multiplicatorbutton::b:p::p, comp deleteselectedentry::b:p::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::27:x, comp deleteselectedentry:::p::p, space :p:57:p, comp savenotebutton:::p::p, space :::p, comp newnotebutton:::p::p, space :::p, comp continueselected:::p::p, space :p:99:p, comp button1:::p::p, space :::p, comp newautomatik:::p::p, space :::p, comp helplabel:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp backbutton::b:p::p, comp newautomatik::b:p::p, comp continueselected::b:p::p, comp newnotebutton::b:p::p, comp savenotebutton::b:p::p, comp deleteselectedentry::b:p::p, comp button1::b:p::p}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -33,14 +33,12 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "backbutton"
 					"text": "<<<<"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "back", true ) )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "newautomatik"
-					"text": "New Automatik"
-				} )
-				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "newxaeliosone"
-					"text": "New XaeliosONE"
+					"text": "New Application"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newautomatik", true ) )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "continueselected"
@@ -54,18 +52,18 @@ new FormModel {
 					name: "savenotebutton"
 					"text": "save Note"
 				} )
-				add( new FormComponent( "javax.swing.JToggleButton" ) {
-					name: "multiplicatorbutton"
-					"text": "1X"
-				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "deleteselectedentry"
 					"text": "delete entry"
 				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "View selected"
+				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq l {space :::p, par l {comp scrollPane1::l:p:497:p, comp labelfortable::l:p:177:p}, space s:::p, par l {seq {comp notelabel:::p::p, space :0:451:x}, comp noteheadline::::481:x, comp scrollPane2::::481:x}, space :::p}}"
-				"$verticalGroup": "par l {seq t {space :::p, par b {comp labelfortable::b:p::p, comp notelabel::b:p::p}, space :::p, par l {comp scrollPane1::::486:x, seq {comp noteheadline:::p::p, space :::p, comp scrollPane2::::454:x}}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, par b {comp labelfortable::b:p::p, comp notelabel::b:p::p}, space :::p, par l {comp scrollPane1::::486:x, seq {comp noteheadline:::p::p, space :::p, comp scrollPane2::::458:x}}, space :::p}}"
 			} ) {
 				name: "panel3"
 				add( new FormComponent( "javax.swing.JLabel" ) {

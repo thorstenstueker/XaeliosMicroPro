@@ -24,7 +24,7 @@ public class Persons extends JPanel {
     }
 
     public static void forward(ActionEvent e) {
-        therapyvote.main(null);
+personhistory.main(null);
         frame.dispose();
         // TODO add your code here
     }
