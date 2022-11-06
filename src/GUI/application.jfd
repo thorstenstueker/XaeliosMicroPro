@@ -57,7 +57,7 @@ new FormModel {
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label12"
-					"text": "Resttime"
+					"text": "00:00"
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label13"
@@ -85,6 +85,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "button2"
 					"text": ">>>>"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "applicationends", true ) )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "button3"

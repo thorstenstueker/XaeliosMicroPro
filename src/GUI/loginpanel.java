@@ -5,6 +5,7 @@
 package GUI;
 
 import GUI.userdata.applicationstatics;
+import com.formdev.flatlaf.FlatLightLaf;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -37,6 +38,11 @@ frame.dispose();
     }
 
     public static void main(String[] args) throws IOException {
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            throw new RuntimeException(e);
+        }
         frame.setContentPane(new loginpanel());
 
 

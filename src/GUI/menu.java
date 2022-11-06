@@ -70,8 +70,6 @@ frame.setVisible(true);
         panel3 = new JPanel();
         panel4 = new JPanel();
         personsButton = new JButton();
-        fsmButton = new JButton();
-        fasciaWafesingleButton = new JButton();
         settingsButton = new JButton();
         usersButton = new JButton();
         grossbildlabel = new JLabel();
@@ -134,7 +132,7 @@ frame.setVisible(true);
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(button5)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 870, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 874, Short.MAX_VALUE)
                         .addComponent(helplabel, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
             );
             panel2Layout.setVerticalGroup(
@@ -155,14 +153,6 @@ frame.setVisible(true);
                 personsButton.setText("Persons");
                 personsButton.addActionListener(e -> persons(e));
 
-                //---- fsmButton ----
-                fsmButton.setText("FSM");
-                fsmButton.addActionListener(e -> fsm(e));
-
-                //---- fasciaWafesingleButton ----
-                fasciaWafesingleButton.setText("FasciaWave Single");
-                fasciaWafesingleButton.addActionListener(e -> fasciaWafesingle(e));
-
                 //---- settingsButton ----
                 settingsButton.setText("Settings");
                 settingsButton.addActionListener(e -> settings(e));
@@ -179,8 +169,6 @@ frame.setVisible(true);
                             .addContainerGap()
                             .addGroup(panel4Layout.createParallelGroup()
                                 .addComponent(personsButton, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                                .addComponent(fsmButton, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                                .addComponent(fasciaWafesingleButton, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
                                 .addComponent(settingsButton, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
                                 .addComponent(usersButton, GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                             .addContainerGap())
@@ -190,11 +178,7 @@ frame.setVisible(true);
                         .addGroup(panel4Layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(personsButton)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(fsmButton)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(fasciaWafesingleButton)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                             .addComponent(usersButton)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(settingsButton)
@@ -221,7 +205,7 @@ frame.setVisible(true);
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addComponent(panel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(97, Short.MAX_VALUE))
+                        .addContainerGap(173, Short.MAX_VALUE))
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(grossbildlabel, GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
@@ -256,18 +240,16 @@ frame.setVisible(true);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    public static JPanel panel1;
-    public static JLabel label1;
-    public static JPanel panel2;
-    public static JLabel helplabel;
-    public static JButton button5;
-    public static JPanel panel3;
-    public static JPanel panel4;
-    public static JButton personsButton;
-    public static JButton fsmButton;
-    public static JButton fasciaWafesingleButton;
-    public static JButton settingsButton;
-    public static JButton usersButton;
-    public static JLabel grossbildlabel;
+    public JPanel panel1;
+    public JLabel label1;
+    public JPanel panel2;
+    public JLabel helplabel;
+    public JButton button5;
+    public JPanel panel3;
+    public JPanel panel4;
+    public JButton personsButton;
+    public JButton settingsButton;
+    public JButton usersButton;
+    public JLabel grossbildlabel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

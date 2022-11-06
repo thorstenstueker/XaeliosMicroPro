@@ -34,6 +34,12 @@ public class application extends JPanel {
         GUI.pads.main(null);
 
     }
+
+    public void applicationends(ActionEvent e) {
+        //set here save endpoint for the results if it was ever running. All therapydata have to get changed. Not to forget: save the applied frequencies.
+        Persons.main(null);
+        frame.dispose();
+    }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
@@ -112,7 +118,7 @@ public class application extends JPanel {
             label11.setText("Resttime :");
 
             //---- label12 ----
-            label12.setText("Resttime");
+            label12.setText("00:00");
 
             //---- label13 ----
             label13.setText("Reason for Application: ");
@@ -200,6 +206,7 @@ public class application extends JPanel {
 
             //---- button2 ----
             button2.setText(">>>>");
+            button2.addActionListener(e -> applicationends(e));
 
             //---- button3 ----
             button3.setText("START");

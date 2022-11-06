@@ -7,12 +7,13 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.*;
 import javax.swing.table.*;
-import com.jgoodies.forms.factories.*;
+//import com.jgoodies.forms.factories.*;
 
 /**
  * @author unknown
  */
 public class therapyvote extends JPanel {
+    public boolean allowstart=true;
 public static JFrame frame = new JFrame();
     public therapyvote() {
         initComponents();
@@ -25,6 +26,15 @@ public static JFrame frame = new JFrame();
     public static void forward(ActionEvent e) {
         application.main(null);
         frame.dispose();
+        // TODO add your code here
+    }
+
+    public void GetintoTherapy(ActionEvent e) {
+        if(allowstart){
+            application.main(null);
+            frame.dispose();
+
+        }
         // TODO add your code here
     }
 
@@ -200,6 +210,7 @@ public static JFrame frame = new JFrame();
 
             //---- button14 ----
             button14.setText(">>>");
+            button14.addActionListener(e -> GetintoTherapy(e));
 
             //---- label10 ----
             label10.setText("INTENSITY");

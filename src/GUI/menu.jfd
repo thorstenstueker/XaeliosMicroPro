@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -21,7 +21,7 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp button5:::p::p, space ::870:x, comp helplabel:::p:56:p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp button5:::p::p, space ::874:x, comp helplabel:::p:56:p}}"
 				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp button5::b:p::p}}"
 			} ) {
 				name: "panel2"
@@ -39,28 +39,18 @@ new FormModel {
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq t {space :::p, comp grossbildlabel::::804:x, space u:::p, comp panel4:::p::p, space :::p}}"
-				"$verticalGroup": "par l {seq l {space :p:176:p, comp panel4:::p::p, space ::97:x}, seq l {space :::p, comp grossbildlabel::::508:x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :p:176:p, comp panel4:::p::p, space ::173:x}, seq l {space :::p, comp grossbildlabel::::508:x, space :::p}}"
 			} ) {
 				name: "panel3"
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-					"$horizontalGroup": "par l {seq {space :::p, par l {comp personsButton::::168:x, comp fsmButton::::168:x, comp fasciaWafesingleButton::l::168:x, comp settingsButton::l::168:x, comp usersButton::l::168:x}, space :::p}}"
-					"$verticalGroup": "par l {seq l {space :::p, comp personsButton:::p::p, space u:::p, comp fsmButton:::p::p, space u:::p, comp fasciaWafesingleButton:::p::p, space ::69:x, comp usersButton:::p::p, space u:::p, comp settingsButton:::p::p, space :::p}}"
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp personsButton::::168:x, comp settingsButton::l::168:x, comp usersButton::l::168:x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, comp personsButton:::p::p, space ::81:x, comp usersButton:::p::p, space u:::p, comp settingsButton:::p::p, space :::p}}"
 				} ) {
 					name: "panel4"
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "personsButton"
 						"text": "Persons"
 						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "persons", true ) )
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "fsmButton"
-						"text": "FSM"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "fsm", true ) )
-					} )
-					add( new FormComponent( "javax.swing.JButton" ) {
-						name: "fasciaWafesingleButton"
-						"text": "FasciaWave Single"
-						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "fasciaWafesingle", true ) )
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "settingsButton"
