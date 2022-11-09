@@ -33,6 +33,8 @@ public static JDialog personsdialog;
     }
 
     public void users(ActionEvent e) {
+        users.main(null);
+        frame.dispose();
         // TODO add your code here
     }
 
@@ -44,9 +46,13 @@ public static JDialog personsdialog;
         // TODO add your code here
     }
 
-    public void button5(ActionEvent e) throws IOException {
-loginpanel.main(null);
-frame.dispose();
+    public void button5(ActionEvent e) {
+        try {
+            loginpanel.main(null);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        frame.dispose();
 
     }
 
@@ -60,7 +66,7 @@ frame.setResizable(true);
 frame.setVisible(true);
     }
 
-    private void initComponents() {
+    private void initComponents(){
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
         label1 = new JLabel();
@@ -117,13 +123,7 @@ frame.setVisible(true);
 
             //---- button5 ----
             button5.setText("<<<<");
-            button5.addActionListener(e -> {
-                try {
-                    button5(e);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-            });
+            button5.addActionListener(e -> button5(e));
 
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
