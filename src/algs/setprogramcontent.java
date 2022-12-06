@@ -4,6 +4,8 @@
  */
 package algs;
 
+import runtimevars.activetherapy;
+
 /**
  *
  * @author thorsten
@@ -13,19 +15,19 @@ public class setprogramcontent {
   public void setbymeasurement(String channeltarget){
       
       if(channeltarget.equals("1")){
-     runtimevars.activetherapy.theactivetherapy.program=runtimevars.activetherapy.theactivetherapy.programlow;
+     activetherapy.theactivetherapy.runningprogrtam=runtimevars.activetherapy.theactivetherapy.programlow;
       }
       
        if(channeltarget.equals("2")){
-     runtimevars.activetherapy.theactivetherapy.program=runtimevars.activetherapy.theactivetherapy.progammiddle;
+     activetherapy.theactivetherapy.runningprogrtam=runtimevars.activetherapy.theactivetherapy.progammiddle;
       }
       
        if(channeltarget.equals("3")){
-     runtimevars.activetherapy.theactivetherapy.program=runtimevars.activetherapy.theactivetherapy.programhigh;
+     activetherapy.theactivetherapy.runningprogrtam=runtimevars.activetherapy.theactivetherapy.programhigh;
       }
        
      if(channeltarget.equals("0")){
-         runtimevars.activetherapy.theactivetherapy.program=runtimevars.activetherapy.theactivetherapy.progammiddle;
+         activetherapy.theactivetherapy.runningprogrtam=runtimevars.activetherapy.theactivetherapy.progammiddle;
      }  
       
       

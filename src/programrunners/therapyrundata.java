@@ -19,8 +19,8 @@ public class therapyrundata {
     public static void initializeit(){
         runningtherapy=new datatypes.therapymodel();
         runninglcdrives=new datatypes.lcdrivemodel();
-        
-  
+
+
     }
     
     

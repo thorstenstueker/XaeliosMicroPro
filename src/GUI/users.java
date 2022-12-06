@@ -2,6 +2,8 @@ package GUI;/*
  * Created by JFormDesigner on Sun Oct 02 10:09:07 CEST 2022
  */
 
+import datatypes.ruuntimevars;
+
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +13,10 @@ import javax.swing.table.*;
  * @author unknown
  */
 public class users extends JPanel {
+    public datatypes.ruuntimevars varclassrunner = new ruuntimevars();
+
     public static JFrame frame = new JFrame();
+    public static users classrun = new users();
     public users() {
         initComponents();
     }
@@ -27,6 +32,8 @@ public class users extends JPanel {
         frame.pack();
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
+      
+
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off

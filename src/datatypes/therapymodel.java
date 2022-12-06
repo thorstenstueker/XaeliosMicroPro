@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class therapymodel {
     public String number,progname,reason,date,personnumber,follows,battpoints,type;
-    public ArrayList<String> program,programhigh,programlow,progammiddle,padspos,measurea,measureb,measurec,measured,measuree,measuref,measureg,measureh,measuren,scana,scanb,scanc,scand,scane,scanf,scang,scanh=new ArrayList<>();
+    public ArrayList<String> programhigh,runningprogrtam,programlow,progammiddle,padspos,measurea,measureb,measurec,measured,measuree,measuref,measureg,measureh,measuren,scana,scanb,scanc,scand,scane,scanf,scang,scanh=new ArrayList<>();
     public boolean hasscan,isfollowupmode,isthreetargetprg=false;
     public int targeta,targetb,targetc,targetd,targete,targetf,targetg,targeth;
     public int xposactual,xposmax,durationseconds;
@@ -81,13 +81,7 @@ public class therapymodel {
         this.type = type;
     }
 
-    public ArrayList<String> getProgram() {
-        return program;
-    }
 
-    public void setProgram(ArrayList<String> program) {
-        this.program = program;
-    }
 
     public ArrayList<String> getProgramhigh() {
         return programhigh;

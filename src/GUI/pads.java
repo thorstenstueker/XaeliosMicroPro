@@ -40,6 +40,7 @@ public class pads extends JPanel {
     }
 
     public void graphicslabelComponentResized(ComponentEvent e) {
+        System.out.println(graphicslabel.getSize());
 
 
         // TODO add your code here
@@ -53,9 +54,10 @@ public class pads extends JPanel {
         panel2 = new JPanel();
         label2 = new JLabel();
         back = new JButton();
+        comboBox1 = new JComboBox<>();
+        button1 = new JButton();
         panel3 = new JPanel();
-        scrollPane1 = new JScrollPane();
-        graphicslabel = new JLabel();
+        label4 = new JLabel();
 
         //======== this ========
         setBackground(new Color(0x000033));
@@ -77,7 +79,7 @@ public class pads extends JPanel {
                     .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(label3)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 648, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label1, GroupLayout.PREFERRED_SIZE, 292, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
             );
@@ -105,6 +107,29 @@ public class pads extends JPanel {
             back.setText("<<<<");
             back.addActionListener(e -> back(e));
 
+            //---- comboBox1 ----
+            comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F",
+                "G",
+                "H",
+                "L1",
+                "L2",
+                "L3",
+                "L4",
+                "NLINE1",
+                "NLINE2",
+                "NLINE3",
+                "NLINE4"
+            }));
+
+            //---- button1 ----
+            button1.setText("CLEAR POSITIONS OF SELECTED");
+
             GroupLayout panel2Layout = new GroupLayout(panel2);
             panel2.setLayout(panel2Layout);
             panel2Layout.setHorizontalGroup(
@@ -112,58 +137,46 @@ public class pads extends JPanel {
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(back)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 874, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button1)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
             );
             panel2Layout.setVerticalGroup(
                 panel2Layout.createParallelGroup()
                     .addGroup(panel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(back))
+                        .addComponent(back)
+                        .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button1))
             );
         }
 
         //======== panel3 ========
         {
 
-            //======== scrollPane1 ========
-            {
-                scrollPane1.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-                scrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-                //---- graphicslabel ----
-                graphicslabel.setText("text");
-                graphicslabel.setAutoscrolls(true);
-                graphicslabel.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mouseClicked(MouseEvent e) {
-                        graphicslabelMouseClicked(e);
-                    }
-                });
-                graphicslabel.addComponentListener(new ComponentAdapter() {
-                    @Override
-                    public void componentResized(ComponentEvent e) {
-                        graphicslabelComponentResized(e);
-                    }
-                });
-                scrollPane1.setViewportView(graphicslabel);
-            }
+            //---- label4 ----
+            label4.setText("text");
+            label4.setBackground(new Color(0x66ff66));
+            label4.setOpaque(true);
 
             GroupLayout panel3Layout = new GroupLayout(panel3);
             panel3.setLayout(panel3Layout);
             panel3Layout.setHorizontalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(label4, GroupLayout.PREFERRED_SIZE, 996, GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             panel3Layout.setVerticalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(label4, GroupLayout.PREFERRED_SIZE, 508, GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
         }
 
@@ -200,8 +213,9 @@ public class pads extends JPanel {
     public JPanel panel2;
     public JLabel label2;
     public JButton back;
+    public JComboBox<String> comboBox1;
+    public JButton button1;
     public JPanel panel3;
-    public JScrollPane scrollPane1;
-    public static JLabel graphicslabel;
+    public JLabel label4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

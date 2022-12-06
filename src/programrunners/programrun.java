@@ -18,6 +18,10 @@ public class programrun {
     public String offmodestring="0,S,S,";
    public programrunners.runchannel channelrun = new runchannel();
     public String sender=null;
+    public String scanplitude="50";
+    public String scannelmode="3";
+    public String scanfreq="32";
+    public String scanchanrise="5";
 
 
     
@@ -28,45 +32,45 @@ public class programrun {
         
         if (hasscan){
         scanseconds++;    
-            channelrun.chana.amplitude = "50";
-            channelrun.chana.channelmode = "3";
-            channelrun.chana.frequency = "32";
-            channelrun.chana.risetime = "5";
+            channelrun.chana.amplitude = scanplitude;
+            channelrun.chana.channelmode = scannelmode;
+            channelrun.chana.frequency = scanfreq;
+            channelrun.chana.risetime = scanchanrise;
 
-            channelrun.chanb.amplitude = "50";
-            channelrun.chanb.channelmode = "3";
-            channelrun.chanb.frequency = "32";
-            channelrun.chanb.risetime = "5";
+            channelrun.chanb.amplitude = scanplitude;
+            channelrun.chanb.channelmode = scannelmode;
+            channelrun.chanb.frequency = scanfreq;
+            channelrun.chanb.risetime = scanchanrise;
 
-            channelrun.chanc.amplitude = "50";
-            channelrun.chanc.channelmode = "3";
-            channelrun.chanc.frequency = "32";
-            channelrun.chanc.risetime = "5";
+            channelrun.chanc.amplitude = scanplitude;
+            channelrun.chanc.channelmode = scannelmode;
+            channelrun.chanc.frequency = scanfreq;
+            channelrun.chanc.risetime = scanchanrise;
 
-            channelrun.chand.amplitude = "50";
-            channelrun.chand.channelmode = "3";
-            channelrun.chand.frequency = "32";
-            channelrun.chand.risetime = "5";
+            channelrun.chand.amplitude = scanplitude;
+            channelrun.chand.channelmode = scannelmode;
+            channelrun.chand.frequency = scanfreq;
+            channelrun.chand.risetime = scanchanrise;
 
-            channelrun.chane.amplitude = "50";
-            channelrun.chane.channelmode = "3";
-            channelrun.chane.frequency = "32";
-            channelrun.chane.risetime = "5";
+            channelrun.chane.amplitude = scanplitude;
+            channelrun.chane.channelmode = scannelmode;
+            channelrun.chane.frequency = scanfreq;
+            channelrun.chane.risetime = scanchanrise;
 
-            channelrun.chanf.amplitude = "50";
-            channelrun.chanf.channelmode = "3";
-            channelrun.chanf.frequency = "32";
-            channelrun.chanf.risetime = "5";
+            channelrun.chanf.amplitude = scanplitude;
+            channelrun.chanf.channelmode = scannelmode;
+            channelrun.chanf.frequency = scanfreq;
+            channelrun.chanf.risetime = scanchanrise;
 
-            channelrun.chang.amplitude = "50";
-            channelrun.chang.channelmode = "3";
-            channelrun.chang.frequency = "32";
-            channelrun.chang.risetime = "5";
+            channelrun.chang.amplitude = scanplitude;
+            channelrun.chang.channelmode = scannelmode;
+            channelrun.chang.frequency = scanfreq;
+            channelrun.chang.risetime = scanchanrise;
 
-            channelrun.chanh.amplitude = "50";
-            channelrun.chanh.channelmode = "3";
-            channelrun.chanh.frequency = "32";
-            channelrun.chanh.risetime = "5";
+            channelrun.chanh.amplitude = scanplitude;
+            channelrun.chanh.channelmode = scannelmode;
+            channelrun.chanh.frequency = scanfreq;
+            channelrun.chanh.risetime = scanchanrise;
             
             channelrun.chann.amplitude="0";
             channelrun.chann.channelmode="0";

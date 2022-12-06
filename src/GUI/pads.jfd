@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -10,7 +10,7 @@ new FormModel {
 			name: "this"
 			"background": new java.awt.Color( 0, 0, 51, 255 )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp label3:::p::p, space ::648:x, comp label1:::p:292:p, space :::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp label3:::p::p, space :::x, comp label1:::p:292:p, space :::p}}"
 				"$verticalGroup": "par l {seq l {space :::p, par l {seq {comp label3:::p::p, space :0:0:x}, comp label1:::::x}, space :::p}}"
 			} ) {
 				name: "panel1"
@@ -25,8 +25,8 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp back:::p::p, space ::874:x, comp label2:::p:56:p}}"
-				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp back::b:p::p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp back:::p::p, space u:::p, comp comboBox1:::p::p, space :::p, comp button1:::p::p, space :::x, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp back::b:p::p, comp comboBox1::b:p::p, comp button1::b:p::p}}"
 			} ) {
 				name: "panel2"
 				add( new FormComponent( "javax.swing.JLabel" ) {
@@ -39,26 +39,43 @@ new FormModel {
 					"text": "<<<<"
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "back", true ) )
 				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox1"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "A"
+						addElement( "A" )
+						addElement( "B" )
+						addElement( "C" )
+						addElement( "D" )
+						addElement( "E" )
+						addElement( "F" )
+						addElement( "G" )
+						addElement( "H" )
+						addElement( "L1" )
+						addElement( "L2" )
+						addElement( "L3" )
+						addElement( "L4" )
+						addElement( "NLINE1" )
+						addElement( "NLINE2" )
+						addElement( "NLINE3" )
+						addElement( "NLINE4" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "CLEAR POSITIONS OF SELECTED"
+				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1::::996:x, space :::p}}"
-				"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1::::508:x, space :::p}}"
+				"$horizontalGroup": "par l {seq l {space :::x, comp label4:::p:996:p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp label4:::p:508:p, space :::x}}"
 			} ) {
 				name: "panel3"
-				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-					name: "scrollPane1"
-					"horizontalScrollBarPolicy": 32
-					"verticalScrollBarPolicy": 22
-					add( new FormComponent( "javax.swing.JLabel" ) {
-						name: "graphicslabel"
-						"text": "text"
-						"autoscrolls": true
-						auxiliary() {
-							"JavaCodeGenerator.variableModifiers": 9
-						}
-						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "graphicslabelMouseClicked", true ) )
-						addEvent( new FormEvent( "java.awt.event.ComponentListener", "componentResized", "graphicslabelComponentResized", true ) )
-					} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "text"
+					"background": new java.awt.Color( 102, 255, 102, 255 )
+					"opaque": true
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
