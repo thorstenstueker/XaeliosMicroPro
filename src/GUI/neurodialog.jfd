@@ -1,0 +1,73 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp itlestring:::p::p, space ::95:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, par t {seq {space :0:0:x, comp itlestring:::p::p}, comp label1:::::x}, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "itlestring"
+					"text": "text"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button1:::p::p, space ::211:x, comp button2:::p::p, space :::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button1::b:p::p, comp button2::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "<<<<"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": ">>>>"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp button3::l:p::p, comp button4::l:p::p, comp button5::l:p::p, comp button6::l:p::p}, space ::345:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp button3:::p::p, space s:::p, comp button4:::p::p, space s:::p, comp button5:::p::p, space s:::p, comp button6:::p::p, space ::57:x}}"
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"text": "+0,1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button4"
+					"text": "+1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button5"
+					"text": "+1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button6"
+					"text": "+10"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 435, 445 )
+		} )
+	}
+}
