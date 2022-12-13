@@ -10,8 +10,14 @@ import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.tools.Tool;
@@ -32,8 +38,7 @@ public class loginpanel extends JPanel {
     }
 
     public void login_pressed(ActionEvent e) {JFrame eframe = new JFrame();
-menu.main(null);
-frame.dispose();
+
 
     }
 
@@ -73,8 +78,73 @@ for(int i=0;i<applicationstatics.applicationssetting.length;i++) {
 
 
     public void login(ActionEvent e) {
+        boolean userfound=false;
+String loginname = usernamefield.getText();
+        String loginpassword="";
+        char[] passwordarray = passwordfield.getPassword();
+        for(int i=0;i<passwordarray.length;i++){
+            System.out.println(passwordarray[i]);
+            loginpassword=loginpassword+passwordarray[i];
+        }
+        //now open db
+        Connection c = null;
+        Statement stmt=null;
+String selectedusername="", selecteduserpassword="",selectedusernumber="";
+        try {
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:/Users/thorstenstueker/hdware/hddata/hddata2.sqlite");
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            String statestring = "SELECT * from users where Name="+"'"+loginname+"'";
+            ResultSet rs = stmt.executeQuery( statestring );
+
+            while ( rs.next() ) {
+                userfound=true;
+                int id = rs.getInt("Usernumber");
+                String  name = rs.getString("Name");
+
+                String  address = rs.getString("password");
+
+                System.out.println("from the database");
+                System.out.println( "ID = " + id );
+                System.out.println( "NAME = " + name );
+                selectedusername=name;
+
+                System.out.println( "ADDRESS = " + address );
+                selecteduserpassword=address;
+                selectedusernumber= String.valueOf(id);
+
+                System.out.println();
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception f ) {
+            System.err.println( f.getClass().getName() + ": " + f.getMessage() );
+            System.exit(0);
+        }
+
+    if (loginpassword.equals(selecteduserpassword)) {
+       if(userfound) {
+           menu.main(null);
+           frame.dispose();
+       }else {
+           JOptionPane.showMessageDialog(frame,"Not correct password or username");
+       }
+    }else {
+        JOptionPane.showMessageDialog(frame,"Not correct password or username");
+    }
+
+
+        System.out.println(loginname+" "+loginpassword);
         // TODO add your code here
     }
+
+
+
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
