@@ -9,13 +9,29 @@ package datatypes;
  * @author thorstenstueker
  */
 public class channelmodel {
-    public String amplitude,frequency,risetime,channelmode;
+    public String amplitude,frequency,risetime,channelmode, therapyduty, lcfrequency;
     
     public String channelstring(){
         String outstring = null;
         outstring=amplitude+","+channelmode+","+frequency+","+risetime;
         
         return outstring;
+    }
+
+    public String therapyduty() {
+        return therapyduty;
+    }
+
+    public void setTherapyduty(String therapyduty) {
+        this.therapyduty = therapyduty;
+    }
+
+    public String lcfrequency() {
+        return lcfrequency;
+    }
+
+    public void setLcfrequency(String lcfrequency) {
+        this.lcfrequency = lcfrequency;
     }
 
     public String getAmplitude() {

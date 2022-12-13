@@ -1,0 +1,230 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp panel1:::::x, comp panel2:::::x, comp panel3::l:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp panel1:::p::p, space :::p, comp panel3:::::x, space :::p, comp panel2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"background": new java.awt.Color( 0, 0, 51, 255 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space ::710:x, comp label1:::p:292:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp label1:::::x, space :::p}}"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/g5632.png" )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::p, comp button2:::p::p, space ::776:x, comp button1:::p::p, space s:::p, comp label2:::p:56:p}}"
+				"$verticalGroup": "par l {par b:l {comp label2::b:::x, comp button1::b:p::p, comp button2::b:p::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/pics/rect43.png" )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": ">>>>"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "<<<<"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:14:p, par l {seq {comp scrollPane1:::p:490:p, space :::p, comp radioButton1:::p::p, space s:::p, comp radioButton2:::p::p, space s:::p, comp radioButton3:::p::p, space :18:18:p, comp radioButton4:::p::p, space s:::p, comp radioButton5:::p::p, space :18:18:p, comp radioButton6:::p::p, space :18:18:p, comp radioButton7:::p::p, space :18:18:p, comp radioButton8:::p::p, space s:::p, comp radioButton9:::p::p, space :18:18:p, comp radioButton10:::p::p}, seq l {space :p:3:p, par l {seq {comp textArea2:::p:484:p, space u:::p, comp radioButton15:::p::p, space :18:18:p, comp radioButton14:::p::p, space :18:18:p, comp radioButton13:::p::p, space :18:18:p, comp radioButton12:::p::p, space :18:18:p, comp radioButton11:::p::p, space :18:18:p, comp radioButton16:::p::p, space :18:18:p, comp radioButton17:::p::p, space :18:18:p, comp radioButton18:::p::p, space :18:18:p, comp radioButton19:::p::p, space :18:18:p, comp radioButton20:::p::p}, comp label3::l:p::p, seq l {par l {comp textArea3:::p:484:p, comp scrollPane2::::0:x}, space :::x, comp radioButton25:::p::p, space :18:18:p, comp radioButton24:::p::p, space :18:18:p, comp radioButton23:::p::p, space :18:18:p, comp radioButton22:::p::p, space :18:18:p, comp radioButton21:::p::p, space :18:18:p, comp radioButton26:::p::p, space :18:18:p, comp radioButton27:::p::p, space :18:18:p, comp radioButton28:::p::p, space :18:18:p, comp radioButton29:::p::p, space :18:18:p, comp radioButton30:::p::p}}}}, space ::20:x}}"
+				"$verticalGroup": "par l {seq {par l {seq l {space :::p, comp scrollPane1:::p:75:p}, seq l {space :p:36:p, par t {par l {comp radioButton3:::p::p, comp radioButton4:::p::p, comp radioButton5:::p::p, comp radioButton6:::p::p, comp radioButton7:::p::p, comp radioButton8:::p::p, comp radioButton9:::p::p, comp radioButton10:::p::p}, par b {comp radioButton1::b:p::p, comp radioButton2::b:p::p}}}}, par l {seq {space :p:33:p, par l {comp radioButton15:::p::p, comp radioButton14:::p::p, comp radioButton13:::p::p, comp radioButton12:::p::p, comp radioButton11:::p::p, comp radioButton16:::p::p, comp radioButton17:::p::p, comp radioButton18:::p::p, comp radioButton19:::p::p, comp radioButton20:::p::p}}, seq l {space :::p, comp textArea2:::p:69:p}}, space u:::p, par l {comp textArea3:::p:69:p, seq {space :27:27:p, par l {comp radioButton25:::p::p, comp radioButton24:::p::p, comp radioButton23:::p::p, comp radioButton22:::p::p, comp radioButton21:::p::p, comp radioButton26:::p::p, comp radioButton27:::p::p, comp radioButton28:::p::p, comp radioButton29:::p::p, comp radioButton30:::p::p}}}, space u:::p, comp label3:::p::p, space s:::p, comp scrollPane2::::231:x, space :::p}}"
+			} ) {
+				name: "panel3"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "textArea1"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton1"
+					"text": "1"
+					"$buttonGroup": &FormReference0 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton2"
+					"text": "2"
+					"$buttonGroup": &FormReference1 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton3"
+					"text": "3"
+					"$buttonGroup": &FormReference2 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton4"
+					"text": "4"
+					"$buttonGroup": &FormReference3 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton5"
+					"text": "5"
+					"$buttonGroup": &FormReference4 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton6"
+					"text": "6"
+					"$buttonGroup": &FormReference5 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton7"
+					"text": "7"
+					"$buttonGroup": &FormReference6 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton8"
+					"text": "8"
+					"$buttonGroup": &FormReference7 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton9"
+					"text": "9"
+					"$buttonGroup": &FormReference8 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton10"
+					"text": "10"
+					"$buttonGroup": &FormReference9 new FormReference( "buttonGroup1" )
+				} )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea2"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton11"
+					"text": "5"
+					"$buttonGroup": #FormReference4
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton12"
+					"text": "4"
+					"$buttonGroup": #FormReference3
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton13"
+					"text": "3"
+					"$buttonGroup": #FormReference2
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton14"
+					"text": "2"
+					"$buttonGroup": #FormReference1
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton15"
+					"text": "1"
+					"$buttonGroup": #FormReference0
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton16"
+					"text": "6"
+					"$buttonGroup": #FormReference5
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton17"
+					"text": "7"
+					"$buttonGroup": #FormReference6
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton18"
+					"text": "8"
+					"$buttonGroup": #FormReference7
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton19"
+					"text": "9"
+					"$buttonGroup": #FormReference8
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton20"
+					"text": "10"
+					"$buttonGroup": #FormReference9
+				} )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea3"
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton21"
+					"text": "5"
+					"$buttonGroup": #FormReference4
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton22"
+					"text": "4"
+					"$buttonGroup": #FormReference3
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton23"
+					"text": "3"
+					"$buttonGroup": #FormReference2
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton24"
+					"text": "2"
+					"$buttonGroup": #FormReference1
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton25"
+					"text": "1"
+					"$buttonGroup": #FormReference0
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton26"
+					"text": "6"
+					"$buttonGroup": #FormReference5
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton27"
+					"text": "7"
+					"$buttonGroup": #FormReference6
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton28"
+					"text": "8"
+					"$buttonGroup": #FormReference7
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton29"
+					"text": "9"
+					"$buttonGroup": #FormReference8
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "radioButton30"
+					"text": "10"
+					"$buttonGroup": #FormReference9
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JEditorPane" ) {
+						name: "editorPane1"
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Notes"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1020, 760 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 776 )
+		} )
+	}
+}

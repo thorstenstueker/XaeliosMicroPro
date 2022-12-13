@@ -26,10 +26,10 @@ public class channeldialog extends JPanel {
         button1 = new JButton();
         button2 = new JButton();
         panel3 = new JPanel();
-        button3 = new JButton();
-        button4 = new JButton();
-        button5 = new JButton();
-        button6 = new JButton();
+        comboBox1 = new JComboBox<>();
+        toggleButton1 = new JToggleButton();
+        toggleButton2 = new JToggleButton();
+        toggleButton3 = new JToggleButton();
 
         //======== this ========
         setBackground(new Color(0x000033));
@@ -106,42 +106,48 @@ public class channeldialog extends JPanel {
         //======== panel3 ========
         {
 
-            //---- button3 ----
-            button3.setText("+0,1");
+            //---- comboBox1 ----
+            comboBox1.setModel(new DefaultComboBoxModel<>(new String[] {
+                "Auto",
+                "+",
+                "-",
+                "Bipolar",
+                "OFF"
+            }));
 
-            //---- button4 ----
-            button4.setText("+1");
+            //---- toggleButton1 ----
+            toggleButton1.setText("SWEEP");
 
-            //---- button5 ----
-            button5.setText("+1");
+            //---- toggleButton2 ----
+            toggleButton2.setText("Visibility");
 
-            //---- button6 ----
-            button6.setText("+10");
+            //---- toggleButton3 ----
+            toggleButton3.setText("shockwave");
 
             GroupLayout panel3Layout = new GroupLayout(panel3);
             panel3.setLayout(panel3Layout);
             panel3Layout.setHorizontalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panel3Layout.createParallelGroup()
-                            .addComponent(button3)
-                            .addComponent(button4)
-                            .addComponent(button5)
-                            .addComponent(button6))
-                        .addContainerGap(341, Short.MAX_VALUE))
+                        .addGap(120, 120, 120)
+                        .addGroup(panel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                            .addComponent(comboBox1)
+                            .addComponent(toggleButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(toggleButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(toggleButton3, GroupLayout.PREFERRED_SIZE, 155, GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(148, Short.MAX_VALUE))
             );
             panel3Layout.setVerticalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(button3)
+                        .addComponent(toggleButton1)
                         .addGap(18, 18, 18)
-                        .addComponent(button4)
+                        .addComponent(toggleButton2)
                         .addGap(18, 18, 18)
-                        .addComponent(button5)
+                        .addComponent(toggleButton3)
                         .addGap(18, 18, 18)
-                        .addComponent(button6)
+                        .addComponent(comboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(41, Short.MAX_VALUE))
             );
         }
@@ -181,9 +187,9 @@ public class channeldialog extends JPanel {
     public JButton button1;
     public JButton button2;
     public JPanel panel3;
-    public JButton button3;
-    public JButton button4;
-    public JButton button5;
-    public JButton button6;
+    public JComboBox<String> comboBox1;
+    public JToggleButton toggleButton1;
+    public JToggleButton toggleButton2;
+    public JToggleButton toggleButton3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

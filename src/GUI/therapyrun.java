@@ -10,6 +10,7 @@ import java.awt.*;
  * @author unknown
  */
 public class therapyrun extends JPanel {
+    public static JFrame frame = new JFrame();
     public therapyrun() {
         initComponents();
     }
@@ -22,10 +23,33 @@ public class therapyrun extends JPanel {
         // TODO add your code here
     }
 
+    public static void main(String[] args) {
+        frame.add(new therapyrun());
+        frame.pack();
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        frame.setVisible(true);
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         panel1 = new JPanel();
         label1 = new JLabel();
+        label4 = new JLabel();
+        textField1 = new JTextField();
+        label5 = new JLabel();
+        textField2 = new JTextField();
+        label6 = new JLabel();
+        textField3 = new JTextField();
+        label7 = new JLabel();
+        textField4 = new JTextField();
+        label8 = new JLabel();
+        textField5 = new JTextField();
+        label9 = new JLabel();
+        label15 = new JLabel();
+        label16 = new JLabel();
+        label17 = new JLabel();
+        appindicator = new JLabel();
         panel2 = new JPanel();
         label2 = new JLabel();
         backbutton = new JButton();
@@ -55,6 +79,7 @@ public class therapyrun extends JPanel {
         button10 = new JButton();
         button11 = new JButton();
         button12 = new JButton();
+        button13 = new JButton();
 
         //======== this ========
         setBackground(new Color(0x000033));
@@ -66,12 +91,76 @@ public class therapyrun extends JPanel {
             label1.setText("text");
             label1.setIcon(new ImageIcon(getClass().getResource("/pics/g5632.png")));
 
+            //---- label4 ----
+            label4.setText("Name");
+
+            //---- label5 ----
+            label5.setText("Firstname");
+
+            //---- label6 ----
+            label6.setText("Reason");
+
+            //---- label7 ----
+            label7.setText("Program");
+
+            //---- label8 ----
+            label8.setText("Type");
+
+            //---- label9 ----
+            label9.setText("Duration");
+
+            //---- label15 ----
+            label15.setText("00:00");
+
+            //---- label16 ----
+            label16.setText("Resttime");
+
+            //---- label17 ----
+            label17.setText("00:00");
+
+            //---- appindicator ----
+            appindicator.setText("Application inactive");
+
             GroupLayout panel1Layout = new GroupLayout(panel1);
             panel1.setLayout(panel1Layout);
             panel1Layout.setHorizontalGroup(
                 panel1Layout.createParallelGroup()
                     .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addGroup(panel1Layout.createParallelGroup()
+                            .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createParallelGroup()
+                                .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                    .addGroup(panel1Layout.createParallelGroup()
+                                        .addComponent(label4)
+                                        .addComponent(label5))
+                                    .addGap(38, 38, 38))
+                                .addGroup(panel1Layout.createSequentialGroup()
+                                    .addComponent(label6)
+                                    .addGap(53, 53, 53)))
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addComponent(label7)
+                                .addGap(46, 46, 46)))
+                        .addGroup(panel1Layout.createParallelGroup()
+                            .addComponent(textField3, GroupLayout.PREFERRED_SIZE, 213, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField4, GroupLayout.PREFERRED_SIZE, 213, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 213, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 213, GroupLayout.PREFERRED_SIZE))
+                        .addGap(43, 43, 43)
+                        .addGroup(panel1Layout.createParallelGroup()
+                            .addComponent(label16)
+                            .addComponent(appindicator)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGroup(panel1Layout.createParallelGroup()
+                                    .addComponent(label8)
+                                    .addComponent(label9))
+                                .addGap(40, 40, 40)
+                                .addGroup(panel1Layout.createParallelGroup()
+                                    .addComponent(label15)
+                                    .addComponent(textField5, GroupLayout.PREFERRED_SIZE, 213, GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                .addComponent(label17)
+                                .addGap(177, 177, 177)))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addComponent(label1, GroupLayout.PREFERRED_SIZE, 292, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
             );
@@ -79,7 +168,40 @@ public class therapyrun extends JPanel {
                 panel1Layout.createParallelGroup()
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(label1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel1Layout.createParallelGroup()
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label4)
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label5)
+                                    .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label6)
+                                    .addComponent(textField3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addGap(6, 6, 6)
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label7)
+                                    .addComponent(textField4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(label1)
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGroup(panel1Layout.createParallelGroup()
+                                    .addGroup(panel1Layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addComponent(label8))
+                                    .addComponent(textField5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label9)
+                                    .addComponent(label15))
+                                .addGap(6, 6, 6)
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label16)
+                                    .addComponent(label17))
+                                .addGap(6, 6, 6)
+                                .addComponent(appindicator)))
                         .addContainerGap())
             );
         }
@@ -245,34 +367,39 @@ public class therapyrun extends JPanel {
             //---- button12 ----
             button12.setText("STOP");
 
+            //---- button13 ----
+            button13.setText("FSMedit");
+
             GroupLayout panel3Layout = new GroupLayout(panel3);
             panel3.setLayout(panel3Layout);
             panel3Layout.setHorizontalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(panel3Layout.createParallelGroup()
-                            .addComponent(button1)
-                            .addComponent(button2)
-                            .addComponent(button3)
-                            .addComponent(button4)
-                            .addComponent(button5)
-                            .addComponent(button6)
-                            .addComponent(button7)
-                            .addComponent(button8)
-                            .addComponent(button9)
-                            .addComponent(button10)
+                        .addGroup(panel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                             .addComponent(button11)
-                            .addComponent(button12))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label3, GroupLayout.PREFERRED_SIZE, 913, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(button1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button9, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button8, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button7, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button12, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(button13, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(label3, GroupLayout.DEFAULT_SIZE, 907, Short.MAX_VALUE)
+                        .addContainerGap())
             );
             panel3Layout.setVerticalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(panel3Layout.createParallelGroup()
+                            .addComponent(label3, GroupLayout.PREFERRED_SIZE, 508, GroupLayout.PREFERRED_SIZE)
                             .addGroup(panel3Layout.createSequentialGroup()
                                 .addComponent(button1)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -296,8 +423,9 @@ public class therapyrun extends JPanel {
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(button11)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button12))
-                            .addComponent(label3, GroupLayout.PREFERRED_SIZE, 508, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(button12)
+                                .addGap(18, 18, 18)
+                                .addComponent(button13)))
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
         }
@@ -310,7 +438,7 @@ public class therapyrun extends JPanel {
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup()
                         .addComponent(panel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(panel2, GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(panel2, GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
                         .addComponent(panel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap())
         );
@@ -331,6 +459,21 @@ public class therapyrun extends JPanel {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     public JPanel panel1;
     public JLabel label1;
+    public JLabel label4;
+    public JTextField textField1;
+    public JLabel label5;
+    public JTextField textField2;
+    public JLabel label6;
+    public JTextField textField3;
+    public JLabel label7;
+    public JTextField textField4;
+    public JLabel label8;
+    public JTextField textField5;
+    public JLabel label9;
+    public JLabel label15;
+    public JLabel label16;
+    public JLabel label17;
+    public JLabel appindicator;
     public JPanel panel2;
     public JLabel label2;
     public JButton backbutton;
@@ -360,5 +503,6 @@ public class therapyrun extends JPanel {
     public JButton button10;
     public JButton button11;
     public JButton button12;
+    public JButton button13;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

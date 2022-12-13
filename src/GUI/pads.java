@@ -31,8 +31,7 @@ public class pads extends JPanel {
         frame.pack();
         frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setVisible(true);
-        labelwidth=graphicslabel.getWidth();
-        labellength=graphicslabel.getHeight();
+
     }
 
     public void graphicslabelMouseClicked(MouseEvent e) {
@@ -57,7 +56,7 @@ public class pads extends JPanel {
         comboBox1 = new JComboBox<>();
         button1 = new JButton();
         panel3 = new JPanel();
-        label4 = new JLabel();
+        graphicslabel = new JLabel();
 
         //======== this ========
         setBackground(new Color(0x000033));
@@ -157,10 +156,10 @@ public class pads extends JPanel {
         //======== panel3 ========
         {
 
-            //---- label4 ----
-            label4.setText("text");
-            label4.setBackground(new Color(0x66ff66));
-            label4.setOpaque(true);
+            //---- graphicslabel ----
+            graphicslabel.setText("text");
+            graphicslabel.setBackground(new Color(0x66ff66));
+            graphicslabel.setOpaque(true);
 
             GroupLayout panel3Layout = new GroupLayout(panel3);
             panel3.setLayout(panel3Layout);
@@ -168,14 +167,14 @@ public class pads extends JPanel {
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label4, GroupLayout.PREFERRED_SIZE, 996, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(graphicslabel, GroupLayout.PREFERRED_SIZE, 996, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             panel3Layout.setVerticalGroup(
                 panel3Layout.createParallelGroup()
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label4, GroupLayout.PREFERRED_SIZE, 508, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(graphicslabel, GroupLayout.PREFERRED_SIZE, 508, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
         }
@@ -216,6 +215,6 @@ public class pads extends JPanel {
     public JComboBox<String> comboBox1;
     public JButton button1;
     public JPanel panel3;
-    public JLabel label4;
+    public JLabel graphicslabel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

@@ -45,25 +45,32 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq {space :::p, par l {comp button3::l:p::p, comp button4::l:p::p, comp button5::l:p::p, comp button6::l:p::p}, space ::341:x}}"
-				"$verticalGroup": "par l {seq l {space :::p, comp button3:::p::p, space s:::p, comp button4:::p::p, space s:::p, comp button5:::p::p, space s:::p, comp button6:::p::p, space ::41:x}}"
+				"$horizontalGroup": "par l {seq l {space :p:120:p, par l:::p {comp comboBox1:::::x, comp toggleButton1:::::x, comp toggleButton2:::::x, comp toggleButton3:::p:155:p}, space ::148:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp toggleButton1:::p::p, space s:::p, comp toggleButton2:::p::p, space s:::p, comp toggleButton3:::p::p, space s:::p, comp comboBox1:::p::p, space ::41:x}}"
 			} ) {
 				name: "panel3"
-				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button3"
-					"text": "+0,1"
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox1"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Auto"
+						addElement( "Auto" )
+						addElement( "+" )
+						addElement( "-" )
+						addElement( "Bipolar" )
+						addElement( "OFF" )
+					}
 				} )
-				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button4"
-					"text": "+1"
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton1"
+					"text": "SWEEP"
 				} )
-				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button5"
-					"text": "+1"
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton2"
+					"text": "Visibility"
 				} )
-				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button6"
-					"text": "+10"
+				add( new FormComponent( "javax.swing.JToggleButton" ) {
+					name: "toggleButton3"
+					"text": "shockwave"
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {

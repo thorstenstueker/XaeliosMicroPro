@@ -29,14 +29,14 @@ public static therapymodel vote = new therapymodel();
     }
 
     public static void forward(ActionEvent e) {
-        application.main(null);
+        therapyrun.main(null);
         frame.dispose();
         // TODO add your code here
     }
 
     public void GetintoTherapy(ActionEvent e) {
         if(allowstart){
-            application.main(null);
+            therapyrun.main(null);
 
             frame.dispose();
 

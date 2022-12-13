@@ -67,12 +67,12 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq l {space :::x, comp label4:::p:996:p, space :::x}}"
-				"$verticalGroup": "par l {seq l {space :::x, comp label4:::p:508:p, space :::x}}"
+				"$horizontalGroup": "par l {seq l {space :::x, comp graphicslabel:::p:996:p, space :::x}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp graphicslabel:::p:508:p, space :::x}}"
 			} ) {
 				name: "panel3"
 				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label4"
+					name: "graphicslabel"
 					"text": "text"
 					"background": new java.awt.Color( 102, 255, 102, 255 )
 					"opaque": true
