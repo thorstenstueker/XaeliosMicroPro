@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.5" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -21,7 +21,7 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::562:x, comp editbutton:::p::p, space :::p, comp deletebutton:::p::p, space :::p, comp newbutton:::p::p, space :::p, comp forwardbutton:::p::p, space :::p, comp helplabel:::p:56:p}}"
+				"$horizontalGroup": "par l {seq t {space :::p, comp backbutton:::p::p, space ::542:x, comp editbutton:::p::p, space :::p, comp deletebutton:::p::p, space :::p, comp newbutton:::p::p, space :::p, comp forwardbutton:::p::p, space :::p, comp helplabel:::p:56:p}}"
 				"$verticalGroup": "par l {par b:l {comp helplabel::b:::x, comp backbutton::b:p::p, comp forwardbutton::b:p::p, comp newbutton::b:p::p, comp deletebutton::b:p::p, comp editbutton::b:p::p}}"
 			} ) {
 				name: "panel2"
@@ -54,12 +54,12 @@ new FormModel {
 				} )
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp searchstring:::p:198:p, space :::p, comp firstnamesearchbutton:::p::p, space :::p, comp lastnamesearchbutton:::p::p, space :0:92:x}, comp scrollPane1::::493:x}, space s:::p, comp panel4:::p::p, space :::p}}"
-				"$verticalGroup": "par l {seq t {space :::p, par t {comp panel4:::::x, seq {par b {comp searchstring::b:p::p, comp firstnamesearchbutton::b:p::p, comp lastnamesearchbutton::b:p::p}, space :::p, comp scrollPane1::::480:x}}, space :::p}}"
+				"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp searchstringfield:::p:198:p, space :::p, comp firstnamesearchbutton:::p::p, space :::p, comp lastnamesearchbutton:::p::p, space :0:84:x}, comp scrollPane1::::493:x}, space s:::p, comp panel4:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, par t {comp panel4:::::x, seq {par b {comp searchstringfield::b:p::p, comp firstnamesearchbutton::b:p::p, comp lastnamesearchbutton::b:p::p}, space :::p, comp scrollPane1::::476:x}}, space :::p}}"
 			} ) {
 				name: "panel3"
 				add( new FormComponent( "javax.swing.JTextField" ) {
-					name: "searchstring"
+					name: "searchstringfield"
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "firstnamesearchbutton"
@@ -117,7 +117,7 @@ new FormModel {
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 					"$horizontalGroup": "par l {seq l {space :::p, par l {seq {comp noteslabel:::p:166:p, space :0:0:x}, seq {par l {seq t {par t {comp med7toggle::::232:x, comp med5toggle::::232:x, comp med9toggle::::232:x}, space :p:12:p, par t {comp med8toggle::l::229:x, comp med6toggle::::229:x, comp med10toggle::::229:x}}, seq t {par t {comp med3toggle::l::232:x, comp med1toggle::::232:x}, space u:::p, par l:::p {comp med2toggle::::229:x, comp med4toggle::::229:x}}, seq {par l {par t:l::p {comp genderbox::::108:x, comp personnumberlabel::l::108:x, comp personnumberfield::l::108:x}, comp genderlabel::l:p:98:p}, space u:::p, par l {seq {par l {comp lastnamelabel:::p:100:p, comp lastnamefield:::p:169:p}, space :::p, par l {seq {comp firstnamelabel:::p:100:p, space :0:0:x}, comp firstnamefield:::::x}}, seq l {comp dateofbirthlabel:::p:100:p, space :p:75:p, comp lastappointmentlabel:::::x}, seq l {comp dateofbirthfield:::p:169:p, space :6:6:p, comp lastappointmentfield:::p:178:p, space :0:0:x}}}}, space :::p}}}, seq l {comp scrollPane2::::479:x, space :::p}}"
-					"$verticalGroup": "par l {seq l {space :::p, par t {seq {comp firstnamelabel:::p::p, space :::p, comp firstnamefield:::p::p}, seq {par b {comp personnumberlabel::b:p::p, comp lastnamelabel::b:p::p}, space :::p, par b {comp personnumberfield::b:p::p, comp lastnamefield::b:p::p}}}, space u:::p, par t {seq {comp genderlabel:::p::p, space :::p, comp genderbox:::p::p}, seq {par l {comp dateofbirthlabel:::p::p, comp lastappointmentlabel:::p::p}, space :6:6:p, par l {comp dateofbirthfield:::p::p, comp lastappointmentfield:::p::p}}}, space s:::p, par b {comp med1toggle::b:p::p, comp med2toggle::b:p::p}, space :::p, par b {comp med3toggle::b:p::p, comp med4toggle::b:p::p}, space :::p, par b {comp med5toggle::b:p::p, comp med6toggle::b:p::p}, space :::p, par l {comp med7toggle:::p::p, comp med8toggle:::p::p}, space :::p, par b {comp med9toggle::b:p::p, comp med10toggle::b:p::p}, space u:::p, comp noteslabel:::p::p, space :::p, comp scrollPane2::::210:x, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par t {seq {comp firstnamelabel:::p::p, space :::p, comp firstnamefield:::p::p}, seq {par b {comp personnumberlabel::b:p::p, comp lastnamelabel::b:p::p}, space :::p, par b {comp personnumberfield::b:p::p, comp lastnamefield::b:p::p}}}, space u:::p, par t {seq {comp genderlabel:::p::p, space :::p, comp genderbox:::p::p}, seq {par l {comp dateofbirthlabel:::p::p, comp lastappointmentlabel:::p::p}, space :6:6:p, par l {comp dateofbirthfield:::p::p, comp lastappointmentfield:::p::p}}}, space s:::p, par b {comp med1toggle::b:p::p, comp med2toggle::b:p::p}, space :::p, par b {comp med3toggle::b:p::p, comp med4toggle::b:p::p}, space :::p, par b {comp med5toggle::b:p::p, comp med6toggle::b:p::p}, space :::p, par l {comp med7toggle:::p::p, comp med8toggle:::p::p}, space :::p, par b {comp med9toggle::b:p::p, comp med10toggle::b:p::p}, space u:::p, comp noteslabel:::p::p, space :::p, comp scrollPane2::::182:x, space :::p}}"
 				} ) {
 					name: "panel4"
 					add( new FormComponent( "javax.swing.JLabel" ) {

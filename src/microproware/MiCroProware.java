@@ -4,6 +4,9 @@
  */
 package microproware;
 
+import GUI.testframe;
+
+import javax.swing.*;
 import java.io.IOException;
 
 /**
@@ -16,7 +19,10 @@ public class MiCroProware {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-GUI.loginpanel.main(null);
+//GUI.loginpanel.main(null);
+        JFrame frame = new JFrame("Testframe");
+        frame.add(new testframe());
+        frame.setVisible(true);
     }
     
 }

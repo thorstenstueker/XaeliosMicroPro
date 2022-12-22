@@ -23,6 +23,18 @@ public class Persons extends JPanel {
         // TODO add your code here
     }
 
+    public void searchperson(){
+        String firstname = firstnamefield.getText();
+        String lastname = lastnamefield.getText();
+        String searchstring = searchstringfield.getText();
+
+        boolean firstnamesearch=false;
+
+
+
+
+    }
+
     public static void forward(ActionEvent e) {
 personhistory.main(null);
         frame.dispose();
@@ -41,7 +53,7 @@ personhistory.main(null);
         deletebutton = new JButton();
         editbutton = new JButton();
         panel3 = new JPanel();
-        searchstring = new JTextField();
+        searchstringfield = new JTextField();
         firstnamesearchbutton = new JButton();
         lastnamesearchbutton = new JButton();
         scrollPane1 = new JScrollPane();
@@ -132,7 +144,7 @@ personhistory.main(null);
                     .addGroup(GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(backbutton)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 562, Short.MAX_VALUE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 542, Short.MAX_VALUE)
                         .addComponent(editbutton)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(deletebutton)
@@ -381,7 +393,7 @@ personhistory.main(null);
                             .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(noteslabel)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
                             .addContainerGap())
                 );
             }
@@ -394,12 +406,12 @@ personhistory.main(null);
                         .addContainerGap()
                         .addGroup(panel3Layout.createParallelGroup()
                             .addGroup(panel3Layout.createSequentialGroup()
-                                .addComponent(searchstring, GroupLayout.PREFERRED_SIZE, 198, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(searchstringfield, GroupLayout.PREFERRED_SIZE, 198, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(firstnamesearchbutton)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lastnamesearchbutton)
-                                .addGap(0, 92, Short.MAX_VALUE))
+                                .addGap(0, 84, Short.MAX_VALUE))
                             .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(panel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -413,11 +425,11 @@ personhistory.main(null);
                             .addComponent(panel4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panel3Layout.createSequentialGroup()
                                 .addGroup(panel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                    .addComponent(searchstring, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(searchstringfield, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(firstnamesearchbutton)
                                     .addComponent(lastnamesearchbutton))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)))
+                                .addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)))
                         .addContainerGap())
             );
         }
@@ -478,7 +490,7 @@ personhistory.main(null);
     public static JButton deletebutton;
     public static JButton editbutton;
     public static JPanel panel3;
-    public static JTextField searchstring;
+    public static JTextField searchstringfield;
     public static JButton firstnamesearchbutton;
     public static JButton lastnamesearchbutton;
     public static JScrollPane scrollPane1;
